@@ -12,7 +12,14 @@
 		C62D85B720E5C8270061E1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B520E5C8270061E1CE /* Main.storyboard */; };
 		C62D85B920E5C8270061E1CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B820E5C8270061E1CE /* Assets.xcassets */; };
 		C62D85BC20E5C8270061E1CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85BA20E5C8270061E1CE /* LaunchScreen.storyboard */; };
-		C62D85C420E7D8D80061E1CE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85C320E7D8D80061E1CE /* Person.swift */; };
+		C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */; };
+		C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */; };
+		C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFD20E9FF0800576362 /* SUPMessageViewController.swift */; };
+		C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */; };
+		C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */; };
+		C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0320EA0D9200576362 /* SUPTabBar.swift */; };
+		C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */; };
+		C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +30,14 @@
 		C62D85B820E5C8270061E1CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62D85BB20E5C8270061E1CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62D85BD20E5C8270061E1CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C62D85C320E7D8D80061E1CE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMainViewController.swift; sourceTree = "<group>"; };
+		C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPHomeViewController.swift; sourceTree = "<group>"; };
+		C66A7AFD20E9FF0800576362 /* SUPMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMessageViewController.swift; sourceTree = "<group>"; };
+		C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPDiscoverViewController.swift; sourceTree = "<group>"; };
+		C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPProfileViewController.swift; sourceTree = "<group>"; };
+		C66A7B0320EA0D9200576362 /* SUPTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTabBar.swift; sourceTree = "<group>"; };
+		C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,102 @@
 		C62D85B020E5C8270061E1CE /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				C66A7AEF20E9FCDA00576362 /* Classes */,
 				C62D85B120E5C8270061E1CE /* AppDelegate.swift */,
 				C62D85B320E5C8270061E1CE /* ViewController.swift */,
-				C62D85C320E7D8D80061E1CE /* Person.swift */,
 				C62D85B520E5C8270061E1CE /* Main.storyboard */,
 				C62D85B820E5C8270061E1CE /* Assets.xcassets */,
 				C62D85BA20E5C8270061E1CE /* LaunchScreen.storyboard */,
 				C62D85BD20E5C8270061E1CE /* Info.plist */,
 			);
 			path = SwiftProject;
+			sourceTree = "<group>";
+		};
+		C66A7AEF20E9FCDA00576362 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AF020E9FCDA00576362 /* ViewModels */,
+				C66A7AF120E9FCDA00576362 /* Tools */,
+				C66A7AF220E9FCDA00576362 /* Models */,
+				C66A7AF320E9FCDA00576362 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C66A7AF020E9FCDA00576362 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C66A7AF120E9FCDA00576362 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */,
+				C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C66A7AF220E9FCDA00576362 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C66A7AF320E9FCDA00576362 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AF420E9FCDA00576362 /* Home */,
+				C66A7AF520E9FCDA00576362 /* Discover */,
+				C66A7AF620E9FCDA00576362 /* Message */,
+				C66A7AF720E9FCDA00576362 /* Profile */,
+				C66A7AF820E9FCDA00576362 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C66A7AF420E9FCDA00576362 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C66A7AF520E9FCDA00576362 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		C66A7AF620E9FCDA00576362 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AFD20E9FF0800576362 /* SUPMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C66A7AF720E9FCDA00576362 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C66A7AF820E9FCDA00576362 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */,
+				C66A7B0320EA0D9200576362 /* SUPTabBar.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +194,7 @@
 		C62D85A620E5C8270061E1CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SUP;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = superMan;
@@ -139,9 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62D85C420E7D8D80061E1CE /* Person.swift in Sources */,
+				C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */,
 				C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */,
+				C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */,
+				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
+				C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */,
+				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
+				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
+				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
+				C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

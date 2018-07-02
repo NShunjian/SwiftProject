@@ -12,16 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SUPLog(message: "jkdjfkdjfkdjfkdjfkdj")
-        
-        SUPLog(message: "jkdjfkdjfkdjfkdjfkdj")
-        
-        
-        let str = "hello"
-        
-        
-        let result = (str as NSString).substring(with: NSMakeRange(1, str.characters.count - 2))
-        print(result)
+       
         
         
     }
