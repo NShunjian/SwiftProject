@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SUPMessageViewController: UITableViewController {
+class SUPMessageViewController: SUPVisitorViewControlle {
 
     override func viewDidLoad() {
         super.viewDidLoad()

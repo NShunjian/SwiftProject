@@ -19,6 +19,7 @@ Swift综合性项目
 <div>
 
 MVVM 是 Model-View-ViewModel 的简写，MVVM 模式和 MVC 模式一样，主要目的是分离视图（View）和模型（Model）
+
 MVC 回顾
 
 *MVC 结构图

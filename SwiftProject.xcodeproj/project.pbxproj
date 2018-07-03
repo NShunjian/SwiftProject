@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6644279FFD7448D150D52C60 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */; };
 		C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B120E5C8270061E1CE /* AppDelegate.swift */; };
 		C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B320E5C8270061E1CE /* ViewController.swift */; };
 		C62D85B720E5C8270061E1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B520E5C8270061E1CE /* Main.storyboard */; };
@@ -20,9 +21,14 @@
 		C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0320EA0D9200576362 /* SUPTabBar.swift */; };
 		C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */; };
 		C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */; };
+		C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */; };
+		C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
+		5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C62D85AE20E5C8270061E1CE /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D85B120E5C8270061E1CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62D85B320E5C8270061E1CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		C66A7B0320EA0D9200576362 /* SUPTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTabBar.swift; sourceTree = "<group>"; };
 		C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorViewControlle.swift; sourceTree = "<group>"; };
+		C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6644279FFD7448D150D52C60 /* Pods_SwiftProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47E286730655D63E9044B937 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */,
+				3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6285D04811124BA580B37D2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C62D85A520E5C8270061E1CE = {
 			isa = PBXGroup;
 			children = (
 				C62D85B020E5C8270061E1CE /* SwiftProject */,
 				C62D85AF20E5C8270061E1CE /* Products */,
+				47E286730655D63E9044B937 /* Pods */,
+				6285D04811124BA580B37D2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,10 +190,20 @@
 		C66A7AF820E9FCDA00576362 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C6A3AB2320EB0ED500557BEA /* View */,
 				C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */,
-				C66A7B0320EA0D9200576362 /* SUPTabBar.swift */,
+				C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C6A3AB2320EB0ED500557BEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C66A7B0320EA0D9200576362 /* SUPTabBar.swift */,
+				C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62D85C020E5C8270061E1CE /* Build configuration list for PBXNativeTarget "SwiftProject" */;
 			buildPhases = (
+				68E20A3E48DF7FCD423BC14F /* [CP] Check Pods Manifest.lock */,
 				C62D85AA20E5C8270061E1CE /* Sources */,
 				C62D85AB20E5C8270061E1CE /* Frameworks */,
 				C62D85AC20E5C8270061E1CE /* Resources */,
+				1B127DB2BC4F757721847E44 /* [CP] Embed Pods Frameworks */,
+				0515EC1202C7480446A0E9D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +277,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0515EC1202C7480446A0E9D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B127DB2BC4F757721847E44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68E20A3E48DF7FCD423BC14F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C62D85AA20E5C8270061E1CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,10 +341,12 @@
 				C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */,
 				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
 				C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */,
+				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
+				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
 				C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +482,7 @@
 		};
 		C62D85C120E5C8270061E1CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +497,7 @@
 		};
 		C62D85C220E5C8270061E1CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

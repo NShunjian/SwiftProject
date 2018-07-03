@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SUPProfileViewController: UITableViewController {
+class SUPProfileViewController: SUPVisitorViewControlle {
 
     override func viewDidLoad() {
         super.viewDidLoad()
