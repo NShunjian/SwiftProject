@@ -15,13 +15,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+         //  注册监听的通知
+         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.switchRootVC), name: NSNotification.Name.init(rawValue: SwitchRootVCNotification), object: nil)
+        
+        //  测试解档
+        let userAccount = SUPUserAccount.loadUserAccount()
+        SUPLog(userAccount)
+        
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootVC = SUPMainViewController()
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         return true
     }
-
+    //  监听通知的方法
+    @objc private func switchRootVC(noti: NSNotification) {
+        
+        let object = noti.object
+        //  如果登陆页面进入欢迎页面
+        if object is SUPOAuthViewController {
+            window?.rootViewController = SUPWelComeViewController()
+        } else {
+            window?.rootViewController = SUPMainViewController()
+        }
+        
+        
+        
+    }
+    
+    
+    deinit {
+         NotificationCenter.default.removeObserver(self)
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -47,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-func SUPLog<T>(message:T,file:String = #file,funcName:String = #function,lineNum:Int = #line){
+func SUPLog<T>(_ message:T,file:String = #file,funcName:String = #function,lineNum:Int = #line){
      #if DEBUG
     //        // 1.获取打印所在的文件
     let filename = (file as NSString).lastPathComponent
@@ -58,7 +86,7 @@ func SUPLog<T>(message:T,file:String = #file,funcName:String = #function,lineNum
     //        // 3.获取打印所在行数
     //        let lineNum = lineNum
     //
-    print("\(filename):[\(funcName)](\(lineNum))-\(message)")
+        print("\(filename):[\(funcName)](\(lineNum))>>>>>>: \(message)")
     
     #endif
 }

@@ -5,6 +5,8 @@ target 'SwiftProject' do
 
   use_frameworks!
 
- pod 'SnapKit'
-
+    pod 'SnapKit'
+    pod 'SVProgressHUD'
+    pod 'AFNetworking'
+    pod 'SDWebImage'
 end

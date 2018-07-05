@@ -15,6 +15,7 @@ extension UIBarButtonItem {
 //    }
     
     //  便利构造函数创建UIBarButtonItem类型的对象
+    //如果不想返回nil , init? 问号可以省略
     convenience init(title: String, target: AnyObject?, action: Selector) {
         //  使用self调用其他构造函数
         self.init()

@@ -23,6 +23,12 @@
 		C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */; };
 		C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */; };
 		C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */; };
+		C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */; };
+		C6A3AB2E20EB975C00557BEA /* SUPNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */; };
+		C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2F20EBA34000557BEA /* SUPUserAccount.swift */; };
+		C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB4420EDF59A00557BEA /* SUPUserAccountViewModel.swift */; };
+		C6A3AB4A20EE06AA00557BEA /* CommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB4920EE06AA00557BEA /* CommonTools.swift */; };
+		C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB4C20EE0DDE00557BEA /* SUPWelComeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorViewControlle.swift; sourceTree = "<group>"; };
 		C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorView.swift; sourceTree = "<group>"; };
+		C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPOAuthViewController.swift; sourceTree = "<group>"; };
+		C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPNetworkTools.swift; sourceTree = "<group>"; };
+		C6A3AB2F20EBA34000557BEA /* SUPUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUserAccount.swift; sourceTree = "<group>"; };
+		C6A3AB4420EDF59A00557BEA /* SUPUserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUserAccountViewModel.swift; sourceTree = "<group>"; };
+		C6A3AB4920EE06AA00557BEA /* CommonTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTools.swift; sourceTree = "<group>"; };
+		C6A3AB4C20EE0DDE00557BEA /* SUPWelComeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPWelComeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 		C66A7AF020E9FCDA00576362 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C6A3AB4420EDF59A00557BEA /* SUPUserAccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -132,6 +145,8 @@
 			children = (
 				C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */,
 				C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */,
+				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
+				C6A3AB4920EE06AA00557BEA /* CommonTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -139,6 +154,7 @@
 		C66A7AF220E9FCDA00576362 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6A3AB2F20EBA34000557BEA /* SUPUserAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +162,8 @@
 		C66A7AF320E9FCDA00576362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6A3AB4B20EE0DBC00557BEA /* Welcome */,
+				C6A3AB2A20EB797000557BEA /* OAuth */,
 				C66A7AF420E9FCDA00576362 /* Home */,
 				C66A7AF520E9FCDA00576362 /* Discover */,
 				C66A7AF620E9FCDA00576362 /* Message */,
@@ -204,6 +222,22 @@
 				C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C6A3AB2A20EB797000557BEA /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		C6A3AB4B20EE0DBC00557BEA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				C6A3AB4C20EE0DDE00557BEA /* SUPWelComeViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,10 +334,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,13 +377,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */,
+				C6A3AB2E20EB975C00557BEA /* SUPNetworkTools.swift in Sources */,
 				C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */,
 				C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */,
+				C6A3AB4A20EE06AA00557BEA /* CommonTools.swift in Sources */,
 				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
 				C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */,
 				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
+				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
+				C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */,
+				C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
+				C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
@@ -485,7 +531,9 @@
 			baseConfigurationReference = 5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
@@ -500,7 +548,9 @@
 			baseConfigurationReference = 3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;

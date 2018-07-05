@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+let refbutWork: String = "refbutWork";
 //  访客视图
 class SUPVisitorView: UIView {
     //  延时初始化
@@ -20,6 +21,17 @@ class SUPVisitorView: UIView {
 
      //  主页图片
     private lazy var iconImageView: UIImageView = UIImageView.init(image: UIImage.init(named: "visitordiscover_feed_image_house"))
+    //提示
+    private lazy var msgLab: UILabel = {
+        let lable = UILabel()
+
+        lable.text = "***请在SUPOAuthViewController.swift中输入自己的***\r\n\r\n 微博AppKey: WeiboAppKey = 3165859311\r\n\r\n 微博AppSecret: WeiboAppSecret = c495c40b528ffc1e29045073b4b1da71\r\n\r\n 授权回调页: WeiboRedirect_Uri = http://www.baidu.cn"
+        lable.textColor = UIColor.darkGray
+        lable.font = UIFont.systemFont(ofSize: 18)
+        lable.textAlignment = .center
+        lable.numberOfLines = 0
+        return lable
+    }()
      //  消息信息
     private lazy var messageLable: UILabel = {
         let lable = UILabel()
@@ -53,15 +65,31 @@ class SUPVisitorView: UIView {
         button.setBackgroundImage(UIImage.init(named: "common_button_white_disable"), for: .normal)
         return button
     }()
+    
+    private lazy var disButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(SUPVisitorView.disButtonAction), for: .touchUpInside)
+        button.setTitle("移除当前页面", for: .normal)
+        button.setTitleColor(UIColor.darkGray, for: .normal)
+        button.setTitleColor(UIColor.orange, for: .highlighted)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.setBackgroundImage(UIImage.init(named: "common_button_white_disable"), for: .normal)
+        return button
+    }()
     @objc private func registerButtonAction() {
-        SUPLog(message: "注册")
+        SUPLog("注册")
         //  执行闭包
         loginClosure?()
     }
     @objc private func loginButtonAction() {
-        SUPLog(message: "登录")
+        SUPLog("登录")
         //  执行闭包
         loginClosure?()
+    }
+    @objc private func disButtonAction(){
+        SUPLog("移除当前页面")
+
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: refbutWork), object: self)
     }
     //  手写代码的方式去创建对象
     override init(frame: CGRect) {
@@ -81,14 +109,23 @@ class SUPVisitorView: UIView {
         //  设置背景色
         backgroundColor = UIColor(white: 237.0 / 255.0, alpha: 1)
         
+        addSubview(msgLab)
         addSubview(cycleImageView)
         addSubview(maskImageView)
         addSubview(iconImageView)
         addSubview(messageLable)
         addSubview(registerButton)
         addSubview(loginButton)
+        addSubview(disButton)
         
         //  设置约束
+        
+        msgLab.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self).offset(-180)
+            make.width.equalTo(350)
+        }
+        
         cycleImageView.snp.makeConstraints { (make) in
             make.center.equalTo(self)
         }
@@ -117,7 +154,15 @@ class SUPVisitorView: UIView {
             make.size.equalTo(registerButton)
         }
         
+        disButton.snp.makeConstraints { (make) in
+            make.top.equalTo(loginButton.snp.bottom).offset(30)
+            make.trailing.equalTo(loginButton)
+            make.leading.equalTo(registerButton)
+            make.height.equalTo(35)
+            
+        }
         
+//        startAnimation()
     }
     
     

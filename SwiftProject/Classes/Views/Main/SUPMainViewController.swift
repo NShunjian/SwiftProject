@@ -20,7 +20,7 @@ class SUPMainViewController: UITabBarController {
         tabbar.supDelegate = self
         tabbar.composeButtonClosure = { [weak self] in
             
-            SUPLog(message:"我是闭包调用过来的\(String(describing: self))")
+            SUPLog("我是闭包调用过来的\(String(describing: self))")
         }
         //  使用kvc方式给系统的只读属性设置值   (只读属性赋值要用KVC)
 //        self.tab Bar //系统只读属性
@@ -33,14 +33,14 @@ class SUPMainViewController: UITabBarController {
         addChildViewController(childController: SUPProfileViewController(), imageName: "tabbar_profile", title: "我的")
     }
     deinit {
-        SUPLog(message: "被销毁")
+        SUPLog("被销毁")
     }
    
 }
 extension SUPMainViewController: SUPTabBarDelegate {
     //  实现代理方法
     func didSelectedComposeButton() {
-         SUPLog(message:"我是代理对象调用过来的")
+         SUPLog("我是代理对象调用过来的")
     }
     
     
