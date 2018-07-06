@@ -9,7 +9,7 @@
 import UIKit
 //  封装OAuth相关网络请求接口,对应的控制器 SUPOAuthViewController
 class SUPUserAccountViewModel: NSObject {
-    
+    // 单例
     static let sharedUserAccount: SUPUserAccountViewModel = SUPUserAccountViewModel()
     
     //  用户账号模型

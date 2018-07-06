@@ -57,8 +57,8 @@ extension SUPNetworkTools {
     
     //  获取当前登录用户及其所关注（授权）用户的最新微博
     func requestStatuses(accessToken: String, callBack: @escaping (_ response: AnyObject?, _ error: NSError?)->()) {
-        //  准备url
-        let url = "https://api.weibo.com/2/statuses/friends_timeline.json"
+        //  准备url  https://api.weibo.com/2/statuses/home_timeline.json
+        let url = "https://api.weibo.com/2/statuses/home_timeline.json"
         //  准备参数
         let params = [
             "access_token": accessToken
@@ -67,11 +67,10 @@ extension SUPNetworkTools {
         let path = url + "?access_token=" + accessToken
         print(path)
         
-        request(Method: .POST, URLString: url, parameters: params as [String : AnyObject]?) { (response, error) in
+        request(Method: .GET, URLString: url, parameters: params as [String : AnyObject]?) { (response, error) in
             
             callBack(response as AnyObject?,error as NSError?)
         }
-        
     }
     
 }

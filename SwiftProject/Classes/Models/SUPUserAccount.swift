@@ -35,7 +35,6 @@ class SUPUserAccount: NSObject, NSCoding {
     //  kvc构造函数
     //  AnyObject 好比oc里面id类型,表示任意对象类型
     init(dic: [String: AnyObject]) {
-        SUPLog(dic)
         super.init()
         setValuesForKeys(dic)
         

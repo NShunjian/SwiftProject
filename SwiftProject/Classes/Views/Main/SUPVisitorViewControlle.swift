@@ -10,7 +10,7 @@ import UIKit
 //  访客视图控制器
 class SUPVisitorViewControlle: UITableViewController {
      //  是否登录的标记
-    var isLogin:Bool = false
+    var isLogin:Bool = SUPUserAccountViewModel.sharedUserAccount.isLogin
     var visitorView: SUPVisitorView?
     override func loadView() {
         //  登录状态下使用系统提供的视图
@@ -40,7 +40,7 @@ class SUPVisitorViewControlle: UITableViewController {
     }
     
     @objc private func supViewdeleteCell(noti: Notification){
-        visitorView?.removeFromSuperview()
+        super.loadView()
         
     }
     

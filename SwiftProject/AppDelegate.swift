@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SUPLog(userAccount)
         
         
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootVC = SUPMainViewController()
         window?.rootViewController = rootVC
@@ -40,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             window?.rootViewController = SUPMainViewController()
         }
-        
-        
         
     }
     

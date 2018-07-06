@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6644279FFD7448D150D52C60 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */; };
+		C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6C20EF120500DAFF7E /* SUPStatus.swift */; };
+		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
+		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
+		C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7220EF6C7D00DAFF7E /* knowledge.swift */; };
 		C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B120E5C8270061E1CE /* AppDelegate.swift */; };
 		C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B320E5C8270061E1CE /* ViewController.swift */; };
 		C62D85B720E5C8270061E1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B520E5C8270061E1CE /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C6236A6C20EF120500DAFF7E /* SUPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatus.swift; sourceTree = "<group>"; };
+		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
+		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
+		C6236A7220EF6C7D00DAFF7E /* knowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = knowledge.swift; sourceTree = "<group>"; };
 		C62D85AE20E5C8270061E1CE /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D85B120E5C8270061E1CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62D85B320E5C8270061E1CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,8 +132,8 @@
 		C66A7AEF20E9FCDA00576362 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C66A7AF020E9FCDA00576362 /* ViewModels */,
 				C66A7AF120E9FCDA00576362 /* Tools */,
+				C66A7AF020E9FCDA00576362 /* ViewModels */,
 				C66A7AF220E9FCDA00576362 /* Models */,
 				C66A7AF320E9FCDA00576362 /* Views */,
 			);
@@ -147,6 +155,8 @@
 				C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */,
 				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
 				C6A3AB4920EE06AA00557BEA /* CommonTools.swift */,
+				C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */,
+				C6236A7220EF6C7D00DAFF7E /* knowledge.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -155,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				C6A3AB2F20EBA34000557BEA /* SUPUserAccount.swift */,
+				C6236A6C20EF120500DAFF7E /* SUPStatus.swift */,
+				C6236A6E20EF124300DAFF7E /* SUPUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,12 +396,16 @@
 				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
 				C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */,
 				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
+				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */,
 				C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
+				C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */,
 				C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */,
+				C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */,
+				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
