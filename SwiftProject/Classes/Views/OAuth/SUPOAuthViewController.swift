@@ -78,13 +78,6 @@ import UIKit
 import AFNetworking
 import SVProgressHUD
 
-/* 请输入自己的 */  //回调网址也要在微博开发平台里面写入
-//  微博AppKey
-let WeiboAppKey = "2538998503"
-//  微博AppSecret
-let WeiboAppSecret = "790fdd4e81186647aa5eacf57db295e9"
-//  授权回调页 微博开发平台里面将其写入里面 记住!!!!!!!!
-let WeiboRedirect_Uri = "http://www.baidu.cn"
 
 ////  微博AppKey
 //let WeiboAppKey = "3165859311"  //请输入自己的
@@ -128,7 +121,7 @@ class SUPOAuthViewController: UIViewController {
     
     @objc private func autoFillAction() {
         
-        webView.stringByEvaluatingJavaScript(from: "document.getElementById('userId').value = '133445';document.getElementById('passwd').value = '12345'")
+        webView.stringByEvaluatingJavaScript(from: "document.getElementById('userId').value = '15521197089';document.getElementById('passwd').value = 'qq416516696'")
         
         
     }

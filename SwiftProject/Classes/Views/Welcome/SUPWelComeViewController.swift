@@ -70,7 +70,7 @@ class SUPWelComeViewController: UIViewController {
         //  更新约束
         //  设置透明度
         messageLabel.alpha = 0
-        headImageView.snp.updateConstraints { (make) -> Void in
+        headImageView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(view).offset(100)
         }
         //  usingSpringWithDamping 表示阻尼, 0-1, 阻尼越大表示弹簧效果越小

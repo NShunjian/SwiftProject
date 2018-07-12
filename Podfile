@@ -9,4 +9,5 @@ target 'SwiftProject' do
     pod 'SVProgressHUD'
     pod 'AFNetworking'
     pod 'SDWebImage'
+    pod 'MJRefresh'
 end

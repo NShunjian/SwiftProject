@@ -12,19 +12,30 @@
 		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
 		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
 		C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7220EF6C7D00DAFF7E /* knowledge.swift */; };
+		C6236A7720EF714800DAFF7E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7520EF714700DAFF7E /* UIView+Extension.swift */; };
+		C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7620EF714700DAFF7E /* UIBarButtonItem+Extension.swift */; };
+		C6236A7A20EF715500DAFF7E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7920EF715500DAFF7E /* UILabel+Extension.swift */; };
+		C6236A7D20EF749900DAFF7E /* SUPStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7C20EF749900DAFF7E /* SUPStatusTableViewCell.swift */; };
+		C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7E20EF75A900DAFF7E /* SUPStatusListViewModel.swift */; };
+		C6236A8120EF75C500DAFF7E /* SUPStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8020EF75C400DAFF7E /* SUPStatusViewModel.swift */; };
+		C6236A8320EF79AC00DAFF7E /* SUPStatusOriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8220EF79AC00DAFF7E /* SUPStatusOriginView.swift */; };
+		C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8420EF7B2B00DAFF7E /* SUPStatusToolBar.swift */; };
+		C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8620EF7B5400DAFF7E /* SUPStatusRetweetView.swift */; };
+		C6236A8920F0DDE200DAFF7E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8820F0DDE200DAFF7E /* String+Extension.swift */; };
+		C6236A8B20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8A20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift */; };
+		C6236A8D20F0EB6E00DAFF7E /* SUPStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A8C20F0EB6E00DAFF7E /* SUPStatusPictureView.swift */; };
 		C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B120E5C8270061E1CE /* AppDelegate.swift */; };
 		C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D85B320E5C8270061E1CE /* ViewController.swift */; };
 		C62D85B720E5C8270061E1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B520E5C8270061E1CE /* Main.storyboard */; };
 		C62D85B920E5C8270061E1CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62D85B820E5C8270061E1CE /* Assets.xcassets */; };
 		C62D85BC20E5C8270061E1CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62D85BA20E5C8270061E1CE /* LaunchScreen.storyboard */; };
+		C63347FB20F5D88D00ABD874 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63347FA20F5D88D00ABD874 /* NSDate+Extension.swift */; };
 		C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */; };
 		C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */; };
 		C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFD20E9FF0800576362 /* SUPMessageViewController.swift */; };
 		C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */; };
 		C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */; };
 		C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0320EA0D9200576362 /* SUPTabBar.swift */; };
-		C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */; };
-		C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */; };
 		C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */; };
 		C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */; };
 		C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */; };
@@ -43,6 +54,18 @@
 		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
 		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
 		C6236A7220EF6C7D00DAFF7E /* knowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = knowledge.swift; sourceTree = "<group>"; };
+		C6236A7520EF714700DAFF7E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C6236A7620EF714700DAFF7E /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		C6236A7920EF715500DAFF7E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		C6236A7C20EF749900DAFF7E /* SUPStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusTableViewCell.swift; sourceTree = "<group>"; };
+		C6236A7E20EF75A900DAFF7E /* SUPStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusListViewModel.swift; sourceTree = "<group>"; };
+		C6236A8020EF75C400DAFF7E /* SUPStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusViewModel.swift; sourceTree = "<group>"; };
+		C6236A8220EF79AC00DAFF7E /* SUPStatusOriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusOriginView.swift; sourceTree = "<group>"; };
+		C6236A8420EF7B2B00DAFF7E /* SUPStatusToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusToolBar.swift; sourceTree = "<group>"; };
+		C6236A8620EF7B5400DAFF7E /* SUPStatusRetweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusRetweetView.swift; sourceTree = "<group>"; };
+		C6236A8820F0DDE200DAFF7E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C6236A8A20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusPictureInfo.swift; sourceTree = "<group>"; };
+		C6236A8C20F0EB6E00DAFF7E /* SUPStatusPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusPictureView.swift; sourceTree = "<group>"; };
 		C62D85AE20E5C8270061E1CE /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D85B120E5C8270061E1CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62D85B320E5C8270061E1CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,14 +73,13 @@
 		C62D85B820E5C8270061E1CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62D85BB20E5C8270061E1CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62D85BD20E5C8270061E1CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C63347FA20F5D88D00ABD874 /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		C66A7AF920E9FE6800576362 /* SUPMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMainViewController.swift; sourceTree = "<group>"; };
 		C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPHomeViewController.swift; sourceTree = "<group>"; };
 		C66A7AFD20E9FF0800576362 /* SUPMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMessageViewController.swift; sourceTree = "<group>"; };
 		C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPDiscoverViewController.swift; sourceTree = "<group>"; };
 		C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPProfileViewController.swift; sourceTree = "<group>"; };
 		C66A7B0320EA0D9200576362 /* SUPTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTabBar.swift; sourceTree = "<group>"; };
-		C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorViewControlle.swift; sourceTree = "<group>"; };
 		C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorView.swift; sourceTree = "<group>"; };
 		C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPOAuthViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +117,30 @@
 				1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6236A7420EF714700DAFF7E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C6236A7520EF714700DAFF7E /* UIView+Extension.swift */,
+				C6236A7620EF714700DAFF7E /* UIBarButtonItem+Extension.swift */,
+				C6236A7920EF715500DAFF7E /* UILabel+Extension.swift */,
+				C6236A8820F0DDE200DAFF7E /* String+Extension.swift */,
+				C63347FA20F5D88D00ABD874 /* NSDate+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C6236A7B20EF742100DAFF7E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C6236A7C20EF749900DAFF7E /* SUPStatusTableViewCell.swift */,
+				C6236A8220EF79AC00DAFF7E /* SUPStatusOriginView.swift */,
+				C6236A8420EF7B2B00DAFF7E /* SUPStatusToolBar.swift */,
+				C6236A8620EF7B5400DAFF7E /* SUPStatusRetweetView.swift */,
+				C6236A8C20F0EB6E00DAFF7E /* SUPStatusPictureView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		C62D85A520E5C8270061E1CE = {
@@ -144,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				C6A3AB4420EDF59A00557BEA /* SUPUserAccountViewModel.swift */,
+				C6236A7E20EF75A900DAFF7E /* SUPStatusListViewModel.swift */,
+				C6236A8020EF75C400DAFF7E /* SUPStatusViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -151,8 +199,7 @@
 		C66A7AF120E9FCDA00576362 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C6A3AB1E20EA31CC00557BEA /* UIBarButtonItem+Extension.swift */,
-				C6A3AB1D20EA31CB00557BEA /* UIView+Extension.swift */,
+				C6236A7420EF714700DAFF7E /* Extension */,
 				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
 				C6A3AB4920EE06AA00557BEA /* CommonTools.swift */,
 				C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */,
@@ -167,6 +214,7 @@
 				C6A3AB2F20EBA34000557BEA /* SUPUserAccount.swift */,
 				C6236A6C20EF120500DAFF7E /* SUPStatus.swift */,
 				C6236A6E20EF124300DAFF7E /* SUPUser.swift */,
+				C6236A8A20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +236,7 @@
 		C66A7AF420E9FCDA00576362 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C6236A7B20EF742100DAFF7E /* view */,
 				C66A7AFB20E9FEF400576362 /* SUPHomeViewController.swift */,
 			);
 			path = Home;
@@ -347,6 +396,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -354,6 +404,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -389,13 +440,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */,
+				C6236A8B20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift in Sources */,
 				C6A3AB2E20EB975C00557BEA /* SUPNetworkTools.swift in Sources */,
 				C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */,
-				C6A3AB2020EA31CC00557BEA /* UIBarButtonItem+Extension.swift in Sources */,
+				C6236A7A20EF715500DAFF7E /* UILabel+Extension.swift in Sources */,
 				C6A3AB4A20EE06AA00557BEA /* CommonTools.swift in Sources */,
+				C63347FB20F5D88D00ABD874 /* NSDate+Extension.swift in Sources */,
+				C6236A8120EF75C500DAFF7E /* SUPStatusViewModel.swift in Sources */,
 				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
-				C6A3AB1F20EA31CC00557BEA /* UIView+Extension.swift in Sources */,
+				C6236A8D20F0EB6E00DAFF7E /* SUPStatusPictureView.swift in Sources */,
 				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
+				C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */,
+				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
 				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
@@ -403,12 +459,18 @@
 				C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
 				C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */,
+				C6236A7D20EF749900DAFF7E /* SUPStatusTableViewCell.swift in Sources */,
 				C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */,
 				C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */,
+				C6236A7720EF714800DAFF7E /* UIView+Extension.swift in Sources */,
+				C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */,
 				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
+				C6236A8320EF79AC00DAFF7E /* SUPStatusOriginView.swift in Sources */,
+				C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
+				C6236A8920F0DDE200DAFF7E /* String+Extension.swift in Sources */,
 				C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

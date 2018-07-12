@@ -56,16 +56,18 @@ class SUPNetworkTools: AFHTTPSessionManager {
 extension SUPNetworkTools {
     
     //  获取当前登录用户及其所关注（授权）用户的最新微博
-    func requestStatuses(accessToken: String, callBack: @escaping (_ response: AnyObject?, _ error: NSError?)->()) {
+    func requestStatuses(accessToken: String, maxId: Int64 = 0, sinceId: Int64 = 0, callBack: @escaping (_ response: AnyObject?, _ error: NSError?)->()) {
         //  准备url  https://api.weibo.com/2/statuses/home_timeline.json
         let url = "https://api.weibo.com/2/statuses/home_timeline.json"
         //  准备参数
         let params = [
-            "access_token": accessToken
+            "access_token": accessToken,
+            "max_id": "\(maxId)",
+            "since_id": "\(sinceId)"
         ]
         
         let path = url + "?access_token=" + accessToken
-        print(path)
+        SUPLog(path)
         
         request(Method: .GET, URLString: url, parameters: params as [String : AnyObject]?) { (response, error) in
             
