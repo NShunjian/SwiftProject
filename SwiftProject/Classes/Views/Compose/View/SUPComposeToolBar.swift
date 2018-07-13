@@ -9,7 +9,7 @@
 import UIKit
 
 //  toolbar按钮的枚举类型
-enum CZComposeToolBarButtonType: Int {
+enum SUPComposeToolBarButtonType: Int {
     //  图片
     case Picture = 0
     //  @
@@ -26,7 +26,9 @@ enum CZComposeToolBarButtonType: Int {
 class SUPComposeToolBar: UIStackView {
 
     //  点击按钮需要执行的闭包
-    var didSelecteToolBarButtonClosure: ((_ type: CZComposeToolBarButtonType)->())?
+    var didSelecteToolBarButtonClosure: ((_ type: SUPComposeToolBarButtonType)->())?
+    //  表情按钮
+    var emoticonButton: UIButton?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,7 +55,7 @@ class SUPComposeToolBar: UIStackView {
     }
     
     //  创建子按钮的通用方法
-    private func addChildButton(imageName: String, type: CZComposeToolBarButtonType) {
+    private func addChildButton(imageName: String, type: SUPComposeToolBarButtonType) {
         let button = UIButton()
         //  根据枚举的原始值,作为按钮的tag
         button.tag = type.rawValue
@@ -82,11 +84,28 @@ class SUPComposeToolBar: UIStackView {
     
     @objc private func buttonAction(button: UIButton) {
         //  通过原始值获取枚举
-        let type = CZComposeToolBarButtonType(rawValue: button.tag)!
+        let type = SUPComposeToolBarButtonType(rawValue: button.tag)!
         
         //  执行闭包,传入参数(枚举)
         didSelecteToolBarButtonClosure?(type)
     }
+    
+    //  根据外界传入的键盘类型设置不同的icon
+    
+    func switchEmotionIcon(isEmoticon: Bool) {
+        //  如果外界告诉我们是表情键盘类型,那么显示系统键盘的icon,否则显示表情的icon
+        if isEmoticon {
+            //  显示系统键盘的icon
+            emoticonButton?.setImage(UIImage(named: "compose_keyboardbutton_background"), for: .normal)
+            emoticonButton?.setImage(UIImage(named: "compose_keyboardbutton_background_highlighted"), for: .highlighted)
+        } else {
+            //  显示表情键盘的icon
+            
+        }
+        
+        
+    }
+    
     
     
 

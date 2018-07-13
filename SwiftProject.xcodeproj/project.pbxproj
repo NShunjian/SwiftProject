@@ -40,6 +40,10 @@
 		C66B97AA20F72B8F00BD37B5 /* SUPComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */; };
 		C66B97AC20F72BE300BD37B5 /* SUPComposeToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */; };
 		C66B97AE20F72C5100BD37B5 /* SUPComposePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */; };
+		C66B97B320F8971300BD37B5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97B220F8971300BD37B5 /* UIImage+Extension.swift */; };
+		C66B97B620F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97B520F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift */; };
+		C66B97B820F898DB00BD37B5 /* SUPEmoticonToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97B720F898DB00BD37B5 /* SUPEmoticonToolBar.swift */; };
+		C66B97BA20F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97B920F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift */; };
 		C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */; };
 		C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */; };
 		C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */; };
@@ -88,6 +92,10 @@
 		C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposeTextView.swift; sourceTree = "<group>"; };
 		C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposeToolBar.swift; sourceTree = "<group>"; };
 		C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposePictureView.swift; sourceTree = "<group>"; };
+		C66B97B220F8971300BD37B5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		C66B97B520F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticonKeyBoard.swift; sourceTree = "<group>"; };
+		C66B97B720F898DB00BD37B5 /* SUPEmoticonToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticonToolBar.swift; sourceTree = "<group>"; };
+		C66B97B920F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticonCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorViewControlle.swift; sourceTree = "<group>"; };
 		C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorView.swift; sourceTree = "<group>"; };
 		C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPOAuthViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 				C6236A7920EF715500DAFF7E /* UILabel+Extension.swift */,
 				C6236A8820F0DDE200DAFF7E /* String+Extension.swift */,
 				C63347FA20F5D88D00ABD874 /* NSDate+Extension.swift */,
+				C66B97B220F8971300BD37B5 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,11 +306,22 @@
 		C66B97A620F728ED00BD37B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C66B97B420F8980E00BD37B5 /* EmoticonKeyBoard */,
 				C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */,
 				C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */,
 				C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C66B97B420F8980E00BD37B5 /* EmoticonKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C66B97B520F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift */,
+				C66B97B720F898DB00BD37B5 /* SUPEmoticonToolBar.swift */,
+				C66B97B920F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift */,
+			);
+			path = EmoticonKeyBoard;
 			sourceTree = "<group>";
 		};
 		C6A3AB2320EB0ED500557BEA /* View */ = {
@@ -481,14 +501,17 @@
 				C6236A8D20F0EB6E00DAFF7E /* SUPStatusPictureView.swift in Sources */,
 				C66B97AC20F72BE300BD37B5 /* SUPComposeToolBar.swift in Sources */,
 				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
+				C66B97BA20F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift in Sources */,
 				C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */,
 				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
 				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */,
+				C66B97B820F898DB00BD37B5 /* SUPEmoticonToolBar.swift in Sources */,
 				C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
+				C66B97B620F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift in Sources */,
 				C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */,
 				C6236A7D20EF749900DAFF7E /* SUPStatusTableViewCell.swift in Sources */,
 				C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */,
@@ -502,6 +525,7 @@
 				C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
+				C66B97B320F8971300BD37B5 /* UIImage+Extension.swift in Sources */,
 				C6236A8920F0DDE200DAFF7E /* String+Extension.swift in Sources */,
 				C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */,
 			);

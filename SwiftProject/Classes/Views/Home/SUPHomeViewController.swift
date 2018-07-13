@@ -36,8 +36,11 @@ class SUPHomeViewController: SUPVisitorViewControlle {
     override func viewDidLoad() {
         super.viewDidLoad()
         //        tableView.translatesAutoresizingMaskIntoConstraints = false
+       
         if isLogin {
             //  设置tableview相关操作
+            setupHeaderView()
+            setupFooterView()
             setupTableView()
             //  登陆成功
             loadData(isPullup: false)
@@ -45,8 +48,7 @@ class SUPHomeViewController: SUPVisitorViewControlle {
             visitorView?.updateVisitorViewInfo(message: nil, imageName: nil)
             
         }
-        setupHeaderView()
-        setupFooterView()
+       
          //设置提示的Label
         setupTipLabel()
     }
@@ -82,21 +84,20 @@ class SUPHomeViewController: SUPVisitorViewControlle {
         statusListViewModel.loadData(isPullup: isPullup) { (isSuccess) -> () in
             //这个配合系统使用的
             //   self.endRefreshing()
-            
             let time: TimeInterval = 1.0
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
                 //code
-
+                
                 self.tableView.mj_header.endRefreshing()
                 self.tableView.mj_footer.endRefreshing()
                 // self.tableView.mj_footer.endRefreshingWithNoMoreData()
                 // 显示提示的Label
                 self.showTipLabel(count: self.statusListViewModel.statusList.count)
             }
-            
             if isSuccess {
                 //  数据请求成功重写刷新数据
                 self.tableView.reloadData()
+                
             } else {
                 SUPLog("数据请求异常")
             }

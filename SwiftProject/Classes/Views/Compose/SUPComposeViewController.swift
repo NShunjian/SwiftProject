@@ -36,7 +36,15 @@ class SUPComposeViewController: UIViewController {
         return button
         
     }()
-    
+    //  表情键盘
+    private lazy var emoticonKeyBoard: SUPEmoticonKeyBoard = {
+        
+        let emoticonKeyBoard = SUPEmoticonKeyBoard()
+        //  指定表情键盘大小
+        emoticonKeyBoard.size = CGSize(width: self.textView.width, height: 216)
+        return emoticonKeyBoard
+        
+    }()
     //  标题视图
     private lazy var titleView: UILabel = {
         let label = UILabel(fontSize: 17, textColor: UIColor.darkGray)
@@ -133,7 +141,7 @@ class SUPComposeViewController: UIViewController {
          
          */
         
-        toolBar.didSelecteToolBarButtonClosure = { [weak self] (type: CZComposeToolBarButtonType) in
+        toolBar.didSelecteToolBarButtonClosure = { [weak self] (type: SUPComposeToolBarButtonType) in
             
             SUPLog(self) // 如果是这样 闭包持有self(当前控制器),  当前控制器又持有toolBar对象 toolBar对象持有闭包(didSelecteToolBarButtonClosure,在SUPComposeToolBar 里面点击调用闭包,当前SUPLog(self)里的self引用计数器就会加一,并且不会被释放), 造成循环引用,使用 [weak self]
             
@@ -150,6 +158,7 @@ class SUPComposeViewController: UIViewController {
                 SUPLog("#")
             case .Emoticon:
                 SUPLog("表情")
+                self?.didSelecedEmoticon()
             case .Add:
                 SUPLog("加号")
             }
@@ -157,7 +166,10 @@ class SUPComposeViewController: UIViewController {
             
             
         }
-        
+        //  设置配图点击加号的闭包
+        pictureView.didSeletedAddImageViewClosure = { [weak self] in
+            self?.didSelectedPicture()
+        }
         
     }
     
@@ -209,14 +221,39 @@ class SUPComposeViewController: UIViewController {
     }
     
     @objc private func sendAction() {
+        
+        //  判断是否有没有图片,有图片调用上传图片的微博接口
+        if pictureView.images.count > 0 {
+            //  获取微博内容
+            let status = textView.text!
+            //  获取accesstoken
+            let accessToken = SUPUserAccountViewModel.sharedUserAccount.accessToken!
+            //  获取图片
+            let image = pictureView.images.first!
+            
+            SVProgressHUD.show()
+            SUPNetworkTools.sharedTools.update(access_token: accessToken, status: status, image: image, callBack: { (response, error) in
+                if error != nil {
+                    SVProgressHUD.showError(withStatus: "网络异常, 发送失败")
+                                    SUPLog(error)
+                                    return
+                                }
+                
+                SVProgressHUD.showSuccess(withStatus: "发送成功")
+            })
+            
+        
+    } else {
+          //  没有图片执行的发送文字微博接口
         //  获取微博内容
         let status = textView.text!
         //  获取accesstoken
         let accessToken = SUPUserAccountViewModel.sharedUserAccount.accessToken!
+        SVProgressHUD.show()
         //  请求发送微博文字接口
         SUPNetworkTools.sharedTools.update(access_token: accessToken, status: status) { (response, error) -> () in
             if error != nil {
-                SVProgressHUD.showError(withStatus: "网络异常发送失败")
+                SVProgressHUD.showError(withStatus: "网络异常,发送失败")
                 SUPLog(error)
                 return
             }
@@ -225,11 +262,32 @@ class SUPComposeViewController: UIViewController {
         
         
     }
-    
+}
     
 }
+
     //  MARK:   点击toolbar按钮处理逻辑
     extension SUPComposeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        //  处理点击表情按钮逻辑
+        func didSelecedEmoticon() {
+            
+            if textView.inputView == nil {
+                //  设置自定义表情键盘
+                textView.inputView = emoticonKeyBoard
+                toolBar.switchEmotionIcon(isEmoticon: true)
+            } else {
+                //  设置为系统键盘
+                textView.inputView = nil
+                toolBar.switchEmotionIcon(isEmoticon: false)
+            }
+            
+            //  设置其为第一响应者
+            textView.becomeFirstResponder()
+            //  重写刷新inputview
+            textView.reloadInputViews()
+            
+            
+        }
         
         //  处理点击图片逻辑
         func didSelectedPicture() {
@@ -264,18 +322,23 @@ class SUPComposeViewController: UIViewController {
         }
         
         //  MARK:   -UIImagePickerControllerDelegate 实现代理方法, 如果实现了代理方法直接调用dismis操作
-        func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             //  添加配图信息
-            pictureView.addImage(image: image)
+            let scaleImage = info["UIImagePickerControllerOriginalImage"] as! UIImage
+            pictureView.addImage(image: scaleImage.scaleImageWithScaleWidth(scaleWidth: 200))
             
             //
             picker.dismiss(animated: true, completion: nil)
         }
         
+        
+
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true, completion: nil)
+             picker.dismiss(animated: true, completion: nil)
         }
         
+
     }
     
     //  MARK:   -实现UITextViewDelegate代理方法
