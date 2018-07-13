@@ -27,8 +27,7 @@ class SUPStatusTableViewCell: UITableViewCell {
             //  设置数据
             originView.statusViewModel = statusViewModel
             toolBar.statusViewModel = statusViewModel
-            print(statusViewModel?.status?.retweeted_status?.pic_urls)
-            SUPLog(toolBarTopConstraint)
+            SUPLog(statusViewModel?.status?.retweeted_status?.pic_urls as Any)
             //  卸载上一次约束
             toolBarTopConstraint?.deactivate()
             
@@ -56,7 +55,6 @@ class SUPStatusTableViewCell: UITableViewCell {
                 toolBar.snp.makeConstraints({ (make) -> Void in
                     self.toolBarTopConstraint = make.top.equalTo(originView.snp.bottom).constraint
                 })
-                 SUPLog(toolBarTopConstraint)
             }
             
         }

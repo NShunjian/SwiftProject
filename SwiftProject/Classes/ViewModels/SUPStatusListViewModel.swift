@@ -36,19 +36,19 @@ class SUPStatusListViewModel: NSObject {
         
         SUPNetworkTools.sharedTools.requestStatuses(accessToken: SUPUserAccountViewModel.sharedUserAccount.accessToken!, maxId: maxId, sinceId: sinceId) { (response, error) -> () in
             if error != nil {
-                print("网络请求异常,\(String(describing: error))")
+                SUPLog("网络请求异常,\(String(describing: error))")
                 callBack(false)
                 return
             }
             //  代码执行到此,表示网络请求成功
             guard let dic = response as? [String: AnyObject] else {
-                print("字典格式不正确")
+                SUPLog("字典格式不正确")
                 callBack(false)
                 return
             }
             //  字典格式正确
             guard let dicArray = dic["statuses"] as? [[String: AnyObject]] else {
-                print("字典格式不正确")
+                SUPLog("字典格式不正确")
                 callBack(false)
                 return
             }

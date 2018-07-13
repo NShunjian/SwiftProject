@@ -18,8 +18,10 @@ class SUPMainViewController: UITabBarController {
         let tabbar = SUPTabBar()
         //  设置代理对象
         tabbar.supDelegate = self
+        //传入闭包
         tabbar.composeButtonClosure = { [weak self] in
-            
+            //  进入发微博界面
+            self?.pushComposeVC()
             SUPLog("我是闭包调用过来的\(String(describing: self))")
         }
         //  使用kvc方式给系统的只读属性设置值   (只读属性赋值要用KVC)
@@ -35,7 +37,15 @@ class SUPMainViewController: UITabBarController {
     deinit {
         SUPLog("被销毁")
     }
-   
+    //  进入发微博界面
+    private func pushComposeVC() {
+        let composeVC = SUPComposeViewController()
+        
+        let nav = UINavigationController(rootViewController: composeVC)
+        
+        present(nav, animated: true, completion: nil)
+        
+    }
 }
 extension SUPMainViewController: SUPTabBarDelegate {
     //  实现代理方法

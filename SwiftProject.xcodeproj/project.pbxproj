@@ -36,6 +36,10 @@
 		C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */; };
 		C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */; };
 		C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A7B0320EA0D9200576362 /* SUPTabBar.swift */; };
+		C66B97A820F7290F00BD37B5 /* SUPComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97A720F7290F00BD37B5 /* SUPComposeViewController.swift */; };
+		C66B97AA20F72B8F00BD37B5 /* SUPComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */; };
+		C66B97AC20F72BE300BD37B5 /* SUPComposeToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */; };
+		C66B97AE20F72C5100BD37B5 /* SUPComposePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */; };
 		C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */; };
 		C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */; };
 		C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */; };
@@ -80,6 +84,10 @@
 		C66A7AFF20E9FF2700576362 /* SUPDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPDiscoverViewController.swift; sourceTree = "<group>"; };
 		C66A7B0120E9FF4900576362 /* SUPProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPProfileViewController.swift; sourceTree = "<group>"; };
 		C66A7B0320EA0D9200576362 /* SUPTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTabBar.swift; sourceTree = "<group>"; };
+		C66B97A720F7290F00BD37B5 /* SUPComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposeViewController.swift; sourceTree = "<group>"; };
+		C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposeTextView.swift; sourceTree = "<group>"; };
+		C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposeToolBar.swift; sourceTree = "<group>"; };
+		C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPComposePictureView.swift; sourceTree = "<group>"; };
 		C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorViewControlle.swift; sourceTree = "<group>"; };
 		C6A3AB2420EB0EEF00557BEA /* SUPVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPVisitorView.swift; sourceTree = "<group>"; };
 		C6A3AB2B20EB7BC100557BEA /* SUPOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPOAuthViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 		C66A7AF320E9FCDA00576362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C66B97A520F728B600BD37B5 /* Compose */,
 				C6A3AB4B20EE0DBC00557BEA /* Welcome */,
 				C6A3AB2A20EB797000557BEA /* OAuth */,
 				C66A7AF420E9FCDA00576362 /* Home */,
@@ -274,6 +283,25 @@
 				C6A3AB2120EB0DBA00557BEA /* SUPVisitorViewControlle.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C66B97A520F728B600BD37B5 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				C66B97A620F728ED00BD37B5 /* View */,
+				C66B97A720F7290F00BD37B5 /* SUPComposeViewController.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		C66B97A620F728ED00BD37B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C66B97A920F72B8F00BD37B5 /* SUPComposeTextView.swift */,
+				C66B97AB20F72BE300BD37B5 /* SUPComposeToolBar.swift */,
+				C66B97AD20F72C5100BD37B5 /* SUPComposePictureView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C6A3AB2320EB0ED500557BEA /* View */ = {
@@ -439,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66B97AE20F72C5100BD37B5 /* SUPComposePictureView.swift in Sources */,
 				C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */,
 				C6236A8B20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift in Sources */,
 				C6A3AB2E20EB975C00557BEA /* SUPNetworkTools.swift in Sources */,
@@ -447,8 +476,10 @@
 				C6A3AB4A20EE06AA00557BEA /* CommonTools.swift in Sources */,
 				C63347FB20F5D88D00ABD874 /* NSDate+Extension.swift in Sources */,
 				C6236A8120EF75C500DAFF7E /* SUPStatusViewModel.swift in Sources */,
+				C66B97A820F7290F00BD37B5 /* SUPComposeViewController.swift in Sources */,
 				C66A7B0020E9FF2700576362 /* SUPDiscoverViewController.swift in Sources */,
 				C6236A8D20F0EB6E00DAFF7E /* SUPStatusPictureView.swift in Sources */,
+				C66B97AC20F72BE300BD37B5 /* SUPComposeToolBar.swift in Sources */,
 				C6A3AB2220EB0DBA00557BEA /* SUPVisitorViewControlle.swift in Sources */,
 				C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */,
 				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
@@ -466,6 +497,7 @@
 				C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */,
 				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
+				C66B97AA20F72B8F00BD37B5 /* SUPComposeTextView.swift in Sources */,
 				C6236A8320EF79AC00DAFF7E /* SUPStatusOriginView.swift in Sources */,
 				C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
@@ -613,7 +645,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -631,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

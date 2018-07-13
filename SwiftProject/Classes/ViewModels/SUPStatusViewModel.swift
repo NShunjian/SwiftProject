@@ -13,6 +13,7 @@ class SUPStatusViewModel: NSObject {
     /*
      这里就是 MVVM中  viewModel 引用 model  var status: SUPStatus?
      */
+    
     //  提供微博数据模型
     var status: SUPStatus?
     

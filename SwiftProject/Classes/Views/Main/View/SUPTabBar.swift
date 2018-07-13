@@ -59,7 +59,13 @@ class SUPTabBar: UITabBar {
     //  可以使用@objc, 告诉系统我们使用oc基于动态运行机制调用这个函数
     @objc private func composeButtonAction() {
         
-        //  执行闭包
+        //  执行闭包 composeButtonClosure?() 就相当于执行 SUPMainViewController中tabbar.composeButtonClosure后面的闭包
+//        tabbar.composeButtonClosure = { [weak self] in
+        //  进入发微博界面
+//        self?.pushComposeVC()
+//        SUPLog("我是闭包调用过来的\(String(describing: self))")
+//    }
+        
         //  使用'?'判断我们的闭包是否为nil,如果为nil后面的代码就不执行,直接返回nil,否则执行后面代码
         composeButtonClosure?()
         

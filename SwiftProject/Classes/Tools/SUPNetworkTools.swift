@@ -52,6 +52,27 @@ class SUPNetworkTools: AFHTTPSessionManager {
     }
     
 }
+//  发微博相关接口
+extension SUPNetworkTools {
+    //  发送文字微博
+    func update(access_token: String, status: String, callBack: @escaping (_ response: AnyObject?, _ error: NSError?)->()) {
+        //  准备url  需要到安全设置里设置一下
+        let url = "https://api.weibo.com/2/statuses/update.json"
+        SUPLog(access_token)
+        SUPLog(status)
+        //  准备参数
+        let params = [
+            "access_token": access_token,
+            "status": status
+        ]
+
+        request(Method: .POST, URLString: url, parameters: params as [String : AnyObject]?) { (response, error) in
+            
+            callBack(response as AnyObject?,error as NSError?)
+        }
+    }
+    
+}
 //  首页相关接口
 extension SUPNetworkTools {
     

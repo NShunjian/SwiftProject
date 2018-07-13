@@ -9,11 +9,11 @@
 import UIKit
 /* 请输入自己的 */  //回调网址也要在微博开发平台里面写入
 //  微博AppKey
-let WeiboAppKey = "2969513224"
+let WeiboAppKey = "2000224178"
 //  微博AppSecret
-let WeiboAppSecret = "877b3fb57f9dc49b6a5d92bc75631a69"
+let WeiboAppSecret = "f5e0036807e090a5b8430c406d729b9a"
 //  授权回调页 微博开发平台里面将其写入里面 记住!!!!!!!!
-let WeiboRedirect_Uri = "http://www.baidu.com/"
+let WeiboRedirect_Uri = "http://www.baidu.com"
 
 
 //  切换根视图控制器的通知名
