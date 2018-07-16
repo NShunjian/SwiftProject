@@ -121,7 +121,7 @@ class SUPOAuthViewController: UIViewController {
     
     @objc private func autoFillAction() {
         
-        webView.stringByEvaluatingJavaScript(from: "document.getElementById('userId').value = '';document.getElementById('passwd').value = ''")
+        webView.stringByEvaluatingJavaScript(from: "document.getElementById('userId').value = '15521197089';document.getElementById('passwd').value = 'qq416516696'")
         
         
     }

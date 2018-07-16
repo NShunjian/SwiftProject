@@ -47,15 +47,16 @@ class SUPComposeToolBar: UIStackView {
         //  子控件等比填充
         distribution = .fillEqually
         //  创建按钮
-        addChildButton(imageName: "compose_toolbar_picture", type: .Picture)
-        addChildButton(imageName: "compose_mentionbutton_background", type: .Mention)
-        addChildButton(imageName: "compose_trendbutton_background", type: .Trend)
-        addChildButton(imageName: "compose_emoticonbutton_background", type: .Emoticon)
-        addChildButton(imageName: "compose_add_background", type: .Add)
+        _ = addChildButton(imageName: "compose_toolbar_picture", type: .Picture)
+       _ = addChildButton(imageName: "compose_mentionbutton_background", type: .Mention)
+       _ = addChildButton(imageName: "compose_trendbutton_background", type: .Trend)
+       emoticonButton = addChildButton(imageName: "compose_emoticonbutton_background", type: .Emoticon)
+       _ = addChildButton(imageName: "compose_add_background", type: .Add)
+        
     }
     
     //  创建子按钮的通用方法
-    private func addChildButton(imageName: String, type: SUPComposeToolBarButtonType) {
+    private func addChildButton(imageName: String, type: SUPComposeToolBarButtonType) -> UIButton {
         let button = UIButton()
         //  根据枚举的原始值,作为按钮的tag
         button.tag = type.rawValue
@@ -76,7 +77,7 @@ class SUPComposeToolBar: UIStackView {
         
         //  添加按钮
         addArrangedSubview(button)
-        
+        return button
     }
     
     
@@ -100,7 +101,9 @@ class SUPComposeToolBar: UIStackView {
             emoticonButton?.setImage(UIImage(named: "compose_keyboardbutton_background_highlighted"), for: .highlighted)
         } else {
             //  显示表情键盘的icon
-            
+            //  显示表情键盘的icon
+            emoticonButton?.setImage(UIImage(named: "compose_emoticonbutton_background"), for: .normal)
+            emoticonButton?.setImage(UIImage(named: "compose_emoticonbutton_background_highlighted"), for: .highlighted)
         }
         
         

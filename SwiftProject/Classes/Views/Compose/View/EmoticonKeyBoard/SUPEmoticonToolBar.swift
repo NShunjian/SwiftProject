@@ -10,11 +10,11 @@ import UIKit
 
 enum SUPEmoticonToolBarButtonType: Int {
     //  默认表情
-    case Normal = 0
+    case Normal = 1000
     //  emoji表情
-    case Emoji = 1
+    case Emoji = 1001
     //  浪小花表情
-    case LXH = 2
+    case LXH = 1002
 }
 
 
@@ -70,7 +70,11 @@ class SUPEmoticonToolBar: UIStackView {
         button.adjustsImageWhenHighlighted = false
         //
         addArrangedSubview(button)
-        
+        if type == .Normal {
+            lastSelectedButton?.isSelected = false
+            button.isSelected = true
+            lastSelectedButton = button
+        }
     }
     
     //  MARK: -- 点击事件
@@ -93,6 +97,25 @@ class SUPEmoticonToolBar: UIStackView {
         
     }
     
+    //  通过指定的section选中相应的按钮
     
-
+    func selectedButtonWithSection(section: Int) {
+        
+        //  通过tag获取相应的按钮, 建议以后给控件设置tag的时候不要设置0,因为0获取不是指定类型的控件,获取的自身
+        let button = viewWithTag(section + 1000) as! UIButton
+        //        if lastSelectedButton == button {
+        //            return
+        //        }
+        
+//        上面 if lastSelectedButton == button 也可以
+        if lastSelectedButton?.tag == section + 1000 {
+            return
+        }
+        
+        
+        SUPLog(section)
+        lastSelectedButton?.isSelected = false
+        button.isSelected = true
+        lastSelectedButton = button
+    }
 }

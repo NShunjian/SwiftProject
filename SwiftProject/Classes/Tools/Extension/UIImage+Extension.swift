@@ -12,6 +12,10 @@ extension UIImage {
     //  等比压缩图片
     //  根据指定压缩宽度,生成等比压缩后的图片
     func scaleImageWithScaleWidth(scaleWidth: CGFloat) -> UIImage {
+        
+        //谁调用这个方法,self就指向谁  这里是scaleImage调用的 所以self指向scaleImage  (在SUPComposeViewController里面调用的)
+        
+        
         //  原始的宽度 100 , 高亮 200 , 压缩后的宽度50 高度 100
         //  计算等比压缩后的高度
         let scaleHeight = scaleWidth / self.size.width * self.size.height

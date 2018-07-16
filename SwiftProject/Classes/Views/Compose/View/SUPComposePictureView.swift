@@ -198,17 +198,14 @@ class SUPComposePictureViewCell: UICollectionViewCell {
             make.top.equalTo(imageView)
             make.trailing.equalTo(imageView)
         }
-        
     }
     
     //  MARK: --监听点击事件
     @objc private func deleteButtonAction() {
         
-        print("哈哈")
+        SUPLog("哈哈")
         //  执行删除图片的闭包
         deleteButtonClosure?()
     }
-    
-    
 }
 

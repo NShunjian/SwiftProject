@@ -63,7 +63,7 @@ class SUPNetworkTools: AFHTTPSessionManager {
                     //  name 服务端需要参数
                     //  fileName 图片对应名字,一般服务不会使用,因为服务端会直接根据你上传的图片随机产生一个唯一的图片名字
                     //  mimeType 资源类型
-                    //  不确定参数类型 可以这个 octet-stream 类型, 二进制流
+                    //  不确定参数类型 可以这个 octet-stream 类型, 二进制流     (通用)
             formData.appendPart(withFileData: imageData as Data, name: name, fileName: "test", mimeType: "application/octet-stream")
             
         }, progress: nil, success: { (task: URLSessionDataTask?, response: Any?) in
@@ -109,7 +109,6 @@ extension SUPNetworkTools {
             "status": status
         ]
 
-        
         //  把图片转成二进制数据
         let imageData = UIImageJPEGRepresentation(image, 0.5)!
         

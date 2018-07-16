@@ -9,15 +9,20 @@
 import UIKit
 /* 请输入自己的 */  //回调网址也要在微博开发平台里面写入
 //  微博AppKey
-let WeiboAppKey = "2000224178"
+let WeiboAppKey = "2780784698"
 //  微博AppSecret
-let WeiboAppSecret = "f5e0036807e090a5b8430c406d729b9a"
+let WeiboAppSecret = "8b38e5bfc4dc8780e16f8efea955a386"
 //  授权回调页 微博开发平台里面将其写入里面 记住!!!!!!!!
 let WeiboRedirect_Uri = "http://www.baidu.com"
 
 
 //  切换根视图控制器的通知名
 let SwitchRootVCNotification = "SwitchRootVCNotification"
+//  点击表情按钮的通知名
+let DidSelectedEmoticonNotification = "DidSelectedEmoticonNotification"
+//  点击删除表情按钮的通知名
+let DidSelectedDeleteEmoticonNotification = "DidSelectedDeleteEmoticonNotification"
+
 //  当前屏幕的宽度
 let ScreenWidth = UIScreen.main.bounds.size.width
 //  当前屏幕的高度

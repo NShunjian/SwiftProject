@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6644279FFD7448D150D52C60 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */; };
+		C60B345020FB2C4E00914236 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C60B344F20FB2C4D00914236 /* Emoticons.bundle */; };
+		C60B345520FB2F1A00914236 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = C60B345420FB2F1A00914236 /* NSString+Emoji.m */; };
+		C60B345720FB2FFD00914236 /* SUPEmoticonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345620FB2FFD00914236 /* SUPEmoticonTools.swift */; };
+		C60B345920FB307400914236 /* SUPEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345820FB307400914236 /* SUPEmoticon.swift */; };
+		C60B345B20FB369D00914236 /* SUPEmoticonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345A20FB369D00914236 /* SUPEmoticonButton.swift */; };
+		C60B345D20FB36CB00914236 /* SUPTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345C20FB36CB00914236 /* SUPTextAttachment.swift */; };
+		C60B345F20FB3CBD00914236 /* SUPComposeTextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345E20FB3CBD00914236 /* SUPComposeTextView+Extension.swift */; };
+		C60B346120FB3D4E00914236 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B346020FB3D4E00914236 /* NSAttributedString+Extension.swift */; };
 		C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6C20EF120500DAFF7E /* SUPStatus.swift */; };
 		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
 		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
@@ -58,6 +66,16 @@
 		1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B813AF56041329227F356D7 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		5AD1CCF40B92D456882089F1 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C60B344F20FB2C4D00914236 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		C60B345220FB2F1A00914236 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		C60B345320FB2F1A00914236 /* NSString+Emoji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		C60B345420FB2F1A00914236 /* NSString+Emoji.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		C60B345620FB2FFD00914236 /* SUPEmoticonTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticonTools.swift; sourceTree = "<group>"; };
+		C60B345820FB307400914236 /* SUPEmoticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticon.swift; sourceTree = "<group>"; };
+		C60B345A20FB369D00914236 /* SUPEmoticonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPEmoticonButton.swift; sourceTree = "<group>"; };
+		C60B345C20FB36CB00914236 /* SUPTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTextAttachment.swift; sourceTree = "<group>"; };
+		C60B345E20FB3CBD00914236 /* SUPComposeTextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SUPComposeTextView+Extension.swift"; sourceTree = "<group>"; };
+		C60B346020FB3D4E00914236 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		C6236A6C20EF120500DAFF7E /* SUPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatus.swift; sourceTree = "<group>"; };
 		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
 		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
@@ -135,6 +153,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C60B345120FB2E5400914236 /* NSStringEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				C60B345320FB2F1A00914236 /* NSString+Emoji.h */,
+				C60B345420FB2F1A00914236 /* NSString+Emoji.m */,
+				C60B345220FB2F1A00914236 /* SwiftProject-Bridging-Header.h */,
+			);
+			path = NSStringEmoji;
+			sourceTree = "<group>";
+		};
 		C6236A7420EF714700DAFF7E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +172,8 @@
 				C6236A8820F0DDE200DAFF7E /* String+Extension.swift */,
 				C63347FA20F5D88D00ABD874 /* NSDate+Extension.swift */,
 				C66B97B220F8971300BD37B5 /* UIImage+Extension.swift */,
+				C60B345E20FB3CBD00914236 /* SUPComposeTextView+Extension.swift */,
+				C60B346020FB3D4E00914236 /* NSAttributedString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -216,11 +246,13 @@
 		C66A7AF120E9FCDA00576362 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C60B345120FB2E5400914236 /* NSStringEmoji */,
 				C6236A7420EF714700DAFF7E /* Extension */,
 				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
 				C6A3AB4920EE06AA00557BEA /* CommonTools.swift */,
 				C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */,
 				C6236A7220EF6C7D00DAFF7E /* knowledge.swift */,
+				C60B345620FB2FFD00914236 /* SUPEmoticonTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -232,6 +264,7 @@
 				C6236A6C20EF120500DAFF7E /* SUPStatus.swift */,
 				C6236A6E20EF124300DAFF7E /* SUPUser.swift */,
 				C6236A8A20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift */,
+				C60B345820FB307400914236 /* SUPEmoticon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,9 +350,12 @@
 		C66B97B420F8980E00BD37B5 /* EmoticonKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
+				C60B344F20FB2C4D00914236 /* Emoticons.bundle */,
 				C66B97B520F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift */,
 				C66B97B720F898DB00BD37B5 /* SUPEmoticonToolBar.swift */,
 				C66B97B920F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift */,
+				C60B345A20FB369D00914236 /* SUPEmoticonButton.swift */,
+				C60B345C20FB36CB00914236 /* SUPTextAttachment.swift */,
 			);
 			path = EmoticonKeyBoard;
 			sourceTree = "<group>";
@@ -385,6 +421,7 @@
 				TargetAttributes = {
 					C62D85AD20E5C8270061E1CE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -413,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62D85BC20E5C8270061E1CE /* LaunchScreen.storyboard in Resources */,
+				C60B345020FB2C4E00914236 /* Emoticons.bundle in Resources */,
 				C62D85B920E5C8270061E1CE /* Assets.xcassets in Resources */,
 				C62D85B720E5C8270061E1CE /* Main.storyboard in Resources */,
 			);
@@ -489,6 +527,7 @@
 			files = (
 				C66B97AE20F72C5100BD37B5 /* SUPComposePictureView.swift in Sources */,
 				C66A7B0220E9FF4900576362 /* SUPProfileViewController.swift in Sources */,
+				C60B345920FB307400914236 /* SUPEmoticon.swift in Sources */,
 				C6236A8B20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift in Sources */,
 				C6A3AB2E20EB975C00557BEA /* SUPNetworkTools.swift in Sources */,
 				C62D85B420E5C8270061E1CE /* ViewController.swift in Sources */,
@@ -506,6 +545,7 @@
 				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
 				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
+				C60B345D20FB36CB00914236 /* SUPTextAttachment.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */,
 				C66B97B820F898DB00BD37B5 /* SUPEmoticonToolBar.swift in Sources */,
@@ -513,18 +553,23 @@
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
 				C66B97B620F8982E00BD37B5 /* SUPEmoticonKeyBoard.swift in Sources */,
 				C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */,
+				C60B345720FB2FFD00914236 /* SUPEmoticonTools.swift in Sources */,
 				C6236A7D20EF749900DAFF7E /* SUPStatusTableViewCell.swift in Sources */,
 				C6A3AB3020EBA34000557BEA /* SUPUserAccount.swift in Sources */,
 				C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */,
 				C6236A7720EF714800DAFF7E /* UIView+Extension.swift in Sources */,
+				C60B345520FB2F1A00914236 /* NSString+Emoji.m in Sources */,
 				C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */,
 				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
+				C60B346120FB3D4E00914236 /* NSAttributedString+Extension.swift in Sources */,
 				C66B97AA20F72B8F00BD37B5 /* SUPComposeTextView.swift in Sources */,
 				C6236A8320EF79AC00DAFF7E /* SUPStatusOriginView.swift in Sources */,
 				C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */,
+				C60B345F20FB3CBD00914236 /* SUPComposeTextView+Extension.swift in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
+				C60B345B20FB369D00914236 /* SUPEmoticonButton.swift in Sources */,
 				C66B97B320F8971300BD37B5 /* UIImage+Extension.swift in Sources */,
 				C6236A8920F0DDE200DAFF7E /* String+Extension.swift in Sources */,
 				C66A7AFE20E9FF0800576362 /* SUPMessageViewController.swift in Sources */,
@@ -666,6 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
@@ -673,6 +719,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/Classes/Tools/NSStringEmoji/SwiftProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -684,6 +732,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WM5WM4GZ3;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
@@ -691,6 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cui.www.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/Classes/Tools/NSStringEmoji/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

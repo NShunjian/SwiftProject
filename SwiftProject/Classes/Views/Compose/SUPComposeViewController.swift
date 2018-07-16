@@ -10,7 +10,8 @@ import UIKit
 import SVProgressHUD
 //  发微博控制器
 class SUPComposeViewController: UIViewController {
-
+   var observerSelected: NSObjectProtocol?
+   var observerDeleted: NSObjectProtocol?
     //  MARK:   - 懒加载控件
     //  右边按钮
     private lazy var rightButton: UIButton  = {
@@ -80,6 +81,8 @@ class SUPComposeViewController: UIViewController {
         view.font = UIFont.systemFont(ofSize: 16)
         //  垂直方向开启拖动
         view.alwaysBounceVertical = true
+        //  扩展 不想要纠错工具条的显示
+        view.autocorrectionType = .no
         return view
     }()
     
@@ -107,6 +110,34 @@ class SUPComposeViewController: UIViewController {
         
         //  监听键盘改变的通知
         NotificationCenter.default.addObserver(self, selector: #selector(SUPComposeViewController.keyboardFrameChange(noti:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        //  监听点击表情按钮的通知
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelectedEmoticon:", name: DidSelectedEmoticonNotification, object: nil)
+        
+        observerSelected = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: DidSelectedEmoticonNotification), object: nil, queue: nil) { [weak self] (noti) -> Void in
+            
+            //  监听通知方法的回调
+//            print(self?.view)
+            //  获取表情模型
+            let emoticon = noti.object as! SUPEmoticon
+            
+            //  插入表情富文本
+            self?.textView.insertEmoticon(emoticon: emoticon)
+        }
+        
+        
+        
+        //  监听点击删除表情按钮的通知
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelecteDeleteEmoticon", name: DidSelectedDeleteEmoticonNotification, object: nil)
+        
+        observerDeleted = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: DidSelectedDeleteEmoticonNotification), object: nil, queue: nil) { [weak self] (noti) -> Void in
+            
+            //  监听通知方法的回调
+//            print(self?.view)
+            //  删除textview内容
+            self?.textView.deleteBackward()
+            
+        }
         
         setupNavUI()
         
@@ -162,11 +193,9 @@ class SUPComposeViewController: UIViewController {
             case .Add:
                 SUPLog("加号")
             }
-            
-            
-            
         }
         //  设置配图点击加号的闭包
+        //当前控制器持有textView, textView持有pictureView ,pictureView持有闭包, 闭包持有当前控制器(self)self?.didSelectedPicture()
         pictureView.didSeletedAddImageViewClosure = { [weak self] in
             self?.didSelectedPicture()
         }
@@ -186,7 +215,24 @@ class SUPComposeViewController: UIViewController {
         navigationItem.titleView = titleView
         
     }
+    //  MARK:   - 监听点击删除表情按钮的通知方法
+//    @objc private func didSelecteDeleteEmoticon() {
+//        //  删除textview内容
+//        textView.deleteBackward()
+//
+//    }
     
+    
+    //  MARK:   - 监听点击表情按钮的通知方法
+//    @objc private func didSelectedEmoticon(noti: NSNotification) {
+//
+//        //  获取表情模型
+//        let emoticon = noti.object as! SUPEmoticon
+//
+//        //  插入表情富文本
+//        textView.insertEmoticon(emoticon: emoticon)
+//
+//    }
     //  MARK:   - 监听键盘改变的通知方法
     @objc private func keyboardFrameChange(noti: NSNotification) {
         
@@ -286,12 +332,10 @@ class SUPComposeViewController: UIViewController {
             //  重写刷新inputview
             textView.reloadInputViews()
             
-            
         }
         
         //  处理点击图片逻辑
         func didSelectedPicture() {
-            
             
             let picCtr = UIImagePickerController()//图片选择器
             picCtr.delegate = self
@@ -327,7 +371,6 @@ class SUPComposeViewController: UIViewController {
             //  添加配图信息
             let scaleImage = info["UIImagePickerControllerOriginalImage"] as! UIImage
             pictureView.addImage(image: scaleImage.scaleImageWithScaleWidth(scaleWidth: 200))
-            
             //
             picker.dismiss(animated: true, completion: nil)
         }
