@@ -16,6 +16,8 @@ let WeiboAppSecret = "8b38e5bfc4dc8780e16f8efea955a386"
 let WeiboRedirect_Uri = "http://www.baidu.com"
 
 
+//  微博首页字体大小
+let StatusFontSize: CGFloat = 14
 //  切换根视图控制器的通知名
 let SwitchRootVCNotification = "SwitchRootVCNotification"
 //  点击表情按钮的通知名

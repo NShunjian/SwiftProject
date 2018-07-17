@@ -154,6 +154,14 @@ class SUPEmoticonCollectionViewCell: UICollectionViewCell {
             value.x = CGFloat(colIndex) * itemWidth
             value.y = CGFloat(rowIndex) * itemHeight
          }
+        
+        //  设置删除按钮的大小
+        deleteButton.size = CGSize(width: itemWidth, height: itemHeight)
+        //  设置x,y坐标
+        deleteButton.x = width - itemWidth
+        deleteButton.y = height - itemHeight
+        
+        
     }
     
 }

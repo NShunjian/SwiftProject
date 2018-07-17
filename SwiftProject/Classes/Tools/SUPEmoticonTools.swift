@@ -130,4 +130,71 @@ class SUPEmoticonTools: NSObject {
         return tempArray
         
     }
+    //  根据表情描述查询表情模型
+    func searchEmoticonWithChs(chs: String) -> SUPEmoticon? {
+        
+        
+        
+        //  扩展
+        
+        //  $0表示闭包中的第一个参数, $1表示第二个参数....
+        //  如果只有一行代码还可以省略return  ,以上代码需要看懂
+        if let defaultEmoticon = defaultEmoticonArray.filter({ $0.chs == chs}).first {
+            return defaultEmoticon
+        }
+        if let lxhEmoticon = lxhEmoticonArray.filter({ $0.chs == chs}).first {
+            return lxhEmoticon
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        //        let defaultEmoticon = defaultEmoticonArray.filter { (emoticon) -> Bool in
+        //            return emoticon.chs == chs
+        //        }.first
+        //
+        //
+        //        let lxhEmoticon = lxhEmoticonArray.filter { (emoticon) -> Bool in
+        //            return emoticon.chs == chs
+        //        }.first
+        //
+        //        if defaultEmoticon != nil {
+        //            return defaultEmoticon
+        //        }
+        //
+        //        if lxhEmoticon != nil {
+        //            return lxhEmoticon
+        //        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //        //  在默认表情数组里面查找
+        //        for value in defaultEmoticonArray {
+        //            //  找到对应的表情模型
+        //            if value.chs == chs {
+        //                return value
+        //            }
+        //        }
+        //        for value in lxhEmoticonArray {
+        //            //  找到对应的表情模型
+        //            if value.chs == chs {
+        //                return value
+        //            }
+        //        }
+        
+        return nil
+        
+        
+    }
+    
 }

@@ -263,15 +263,14 @@ class SUPComposeViewController: UIViewController {
         
         dismiss(animated: true, completion: nil)
         
-        
     }
     
     @objc private func sendAction() {
-        
+        SUPLog(textView.emoticonText)
         //  判断是否有没有图片,有图片调用上传图片的微博接口
         if pictureView.images.count > 0 {
             //  获取微博内容
-            let status = textView.text!
+            let status = textView.emoticonText //textView.text!
             //  获取accesstoken
             let accessToken = SUPUserAccountViewModel.sharedUserAccount.accessToken!
             //  获取图片
@@ -288,7 +287,6 @@ class SUPComposeViewController: UIViewController {
                 SVProgressHUD.showSuccess(withStatus: "发送成功")
             })
             
-        
     } else {
           //  没有图片执行的发送文字微博接口
         //  获取微博内容
@@ -309,7 +307,12 @@ class SUPComposeViewController: UIViewController {
         
     }
 }
-    
+    deinit {
+        print("over")
+        //  移除通知
+        NotificationCenter.default.removeObserver(observerSelected!)
+         NotificationCenter.default.removeObserver(observerDeleted!)
+    }
 }
 
     //  MARK:   点击toolbar按钮处理逻辑

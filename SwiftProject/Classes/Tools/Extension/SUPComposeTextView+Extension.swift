@@ -16,6 +16,7 @@ extension SUPComposeTextView {
         //  range 富文本的范围
         //  是否停止 stop -> stop.memory = true
         var result = ""
+        //枚举不传 直接来个 [] 就可以 例如:options
         self.attributedText.enumerateAttributes(in: NSMakeRange(0, self.attributedText.length), options: []) { (info, range, stop) -> Void in
             //            print(info)
             //            print(range)
@@ -28,7 +29,7 @@ extension SUPComposeTextView {
                 
                 
             } else {
-                //  文本富文本
+                //  文本富文本  就是文字之类的
                 //  获取文本富文本的字符串, 通过指定的范围获取富文本然后再获取富文本对应的字符串
                 result += self.attributedText.attributedSubstring(from: range).string
             }
@@ -69,7 +70,7 @@ extension SUPComposeTextView {
             let attributedStr = NSAttributedString.attributedStringWithEmoticon(emoticon: emoticon, font: self.font!)
             
             //  追加富文本
-            //            originalAttributeStr.appendAttributedString(attributedStr)
+            //  originalAttributeStr.appendAttributedString(attributedStr)
             
             //  获取选中的富文本的范围
             var range = self.selectedRange
@@ -96,7 +97,7 @@ extension SUPComposeTextView {
             //  如果使用! 表示我们确定代理对象已经实现这个代理方法, 没有实现就崩溃
             //  如果使用? 表示代理对象如果实现了代理方法那么可以直接执行,否则不执行直接返回nil
             //  使用!和?都可以, 但是为了安全可以使用?更好一些
-            self.delegate?.textViewDidChange?(self)
+            delegate?.textViewDidChange?(self)
             
             
             

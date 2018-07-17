@@ -16,6 +16,9 @@
 		C60B345D20FB36CB00914236 /* SUPTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345C20FB36CB00914236 /* SUPTextAttachment.swift */; };
 		C60B345F20FB3CBD00914236 /* SUPComposeTextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B345E20FB3CBD00914236 /* SUPComposeTextView+Extension.swift */; };
 		C60B346120FB3D4E00914236 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B346020FB3D4E00914236 /* NSAttributedString+Extension.swift */; };
+		C618EDB020FDB788006D1AC0 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C618EDAE20FDB788006D1AC0 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C618EDB220FDBA2D006D1AC0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C618EDB120FDBA2D006D1AC0 /* libicucore.tbd */; };
+		C618EDB420FDBC12006D1AC0 /* SUPMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDB320FDBC12006D1AC0 /* SUPMatchResult.swift */; };
 		C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6C20EF120500DAFF7E /* SUPStatus.swift */; };
 		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
 		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
@@ -76,6 +79,10 @@
 		C60B345C20FB36CB00914236 /* SUPTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPTextAttachment.swift; sourceTree = "<group>"; };
 		C60B345E20FB3CBD00914236 /* SUPComposeTextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SUPComposeTextView+Extension.swift"; sourceTree = "<group>"; };
 		C60B346020FB3D4E00914236 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		C618EDAE20FDB788006D1AC0 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		C618EDAF20FDB788006D1AC0 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		C618EDB120FDBA2D006D1AC0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C618EDB320FDBC12006D1AC0 /* SUPMatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMatchResult.swift; sourceTree = "<group>"; };
 		C6236A6C20EF120500DAFF7E /* SUPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatus.swift; sourceTree = "<group>"; };
 		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
 		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
@@ -129,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C618EDB220FDBA2D006D1AC0 /* libicucore.tbd in Frameworks */,
 				6644279FFD7448D150D52C60 /* Pods_SwiftProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +156,7 @@
 		6285D04811124BA580B37D2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C618EDB120FDBA2D006D1AC0 /* libicucore.tbd */,
 				1AFB2A8591932A8FFBAF78EC /* Pods_SwiftProject.framework */,
 			);
 			name = Frameworks;
@@ -161,6 +170,15 @@
 				C60B345220FB2F1A00914236 /* SwiftProject-Bridging-Header.h */,
 			);
 			path = NSStringEmoji;
+			sourceTree = "<group>";
+		};
+		C618EDAA20FDB6A6006D1AC0 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				C618EDAF20FDB788006D1AC0 /* RegexKitLite.h */,
+				C618EDAE20FDB788006D1AC0 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		C6236A7420EF714700DAFF7E /* Extension */ = {
@@ -246,6 +264,7 @@
 		C66A7AF120E9FCDA00576362 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C618EDAA20FDB6A6006D1AC0 /* RegexKitLite */,
 				C60B345120FB2E5400914236 /* NSStringEmoji */,
 				C6236A7420EF714700DAFF7E /* Extension */,
 				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
@@ -265,6 +284,7 @@
 				C6236A6E20EF124300DAFF7E /* SUPUser.swift */,
 				C6236A8A20F0E87D00DAFF7E /* SUPStatusPictureInfo.swift */,
 				C60B345820FB307400914236 /* SUPEmoticon.swift */,
+				C618EDB320FDBC12006D1AC0 /* SUPMatchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +564,7 @@
 				C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */,
 				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
 				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
+				C618EDB420FDBC12006D1AC0 /* SUPMatchResult.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C60B345D20FB36CB00914236 /* SUPTextAttachment.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
@@ -560,6 +581,7 @@
 				C6236A7720EF714800DAFF7E /* UIView+Extension.swift in Sources */,
 				C60B345520FB2F1A00914236 /* NSString+Emoji.m in Sources */,
 				C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */,
+				C618EDB020FDB788006D1AC0 /* RegexKitLite.m in Sources */,
 				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
 				C60B346120FB3D4E00914236 /* NSAttributedString+Extension.swift in Sources */,

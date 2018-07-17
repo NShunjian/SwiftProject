@@ -58,10 +58,13 @@ class SUPStatusViewModel: NSObject {
         }
         
         return NSDate.sinaDate(createDateStr: createDateStr).sinaDateString
-        
-        
-        
     }
+    
+    //  原创微博的富文本
+    var origianlAttributedString: NSAttributedString?
+    //  转发微博的富文本
+    var retweetAttributedString: NSAttributedString?
+    
     //  通过重载构造函数初始化当前对象
     init(status: SUPStatus) {
         super.init()
@@ -83,9 +86,59 @@ class SUPStatusViewModel: NSObject {
         handleMbrankImage(mbrank: status.user?.mbrank ?? 0)
         //  处理认证类型等级图片
         handleVerifiedTypeImage(verifiedType: status.user?.verified_type ?? -1)
+        //  处理微博首页的表情描述富文本
+        origianlAttributedString = handleEmoticonContentWithStatus(status: status.text!)
 }
     
     //  处理微博数据里面的逻辑...
+    
+    //  status-> 微博内容
+    private func handleEmoticonContentWithStatus(status: String) -> NSAttributedString {
+        
+        let result = NSMutableAttributedString(string: status)
+        
+        
+        //  使用正则匹配表情描述
+        
+        //  第一个参数 : 正则表达式
+        //  第二个参数 : 闭包  -> 1. 匹配的个数, 2.匹配内容的指针, 3. 匹配范围的指针 4, 是否停止
+        
+        var matchResultArray = [SUPMatchResult]()
+        (status as NSString).enumerateStringsMatched(byRegex: "\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]") { (matchCount, matchString, matchRange, _) in
+             //  获取指针对应的内容
+            SUPLog(matchString?.pointee)
+            
+            //  判断是否能够转成String类型
+            if let chs = matchString?.pointee as String? {
+
+                //  存储匹配的表情描述与表情描述对应的范围
+                let matchResult = SUPMatchResult(matchString: chs, matchRange: (matchRange?.pointee)!)
+                matchResultArray.append(matchResult)
+            }
+        }
+        
+        
+        //  reverse 数组翻转
+        for value in matchResultArray.reversed() {
+            
+            //  查找本地的表情模型
+            if let emoticon = SUPEmoticonTools.sharedTools.searchEmoticonWithChs(chs: value.matchString) {
+                print(status)
+                //  把表情模型转成表情富文本
+                //  取到表情模型里面的图片路径, 创建UIImage对象,然后让其转成富文本
+                //  通过表情模型和字体对象创建表情富文本.systemFontOfSize(StatusFontSize)
+                let attributedStr = NSAttributedString.attributedStringWithEmoticon(emoticon: emoticon, font: UIFont.systemFont(ofSize: StatusFontSize))
+                //  通过匹配的表情描述的范围替换指定表情富文本
+                result.replaceCharacters(in: value.matchRange, with: attributedStr)
+                
+            }
+            
+        }
+        
+        
+        return result
+        
+    }
     //  处理认证类型等级图片
     private func handleVerifiedTypeImage(verifiedType: Int) {
         
@@ -146,6 +199,10 @@ class SUPStatusViewModel: NSObject {
             let result = "@\(name): \(text)"
             
             retweetContent = result
+            
+            //  设置转发微博富文本
+            retweetAttributedString = handleEmoticonContentWithStatus(status: retweetContent!)
+            
         }
         
     }
