@@ -17,7 +17,9 @@ class SUPStatusRetweetView: UIView {
     var statusViewModel: SUPStatusViewModel? {
         didSet {
             //  绑定转发微博内容
-             contentLabel.text = statusViewModel?.retweetContent
+            contentLabel.attributedText = statusViewModel?.retweetAttributedString
+            
+//          contentLabel.text = statusViewModel?.retweetContent
             //  卸载上一次约束
             retweetViewBottomConstraint?.deactivate()
             //  判断配图是否存在并且是否大于0

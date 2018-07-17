@@ -133,7 +133,7 @@ class SUPEmoticonTools: NSObject {
     //  根据表情描述查询表情模型
     func searchEmoticonWithChs(chs: String) -> SUPEmoticon? {
         
-        
+//        SUPLog(defaultEmoticonArray.filter({ $0.chs == chs}))
         
         //  扩展
         
@@ -145,10 +145,6 @@ class SUPEmoticonTools: NSObject {
         if let lxhEmoticon = lxhEmoticonArray.filter({ $0.chs == chs}).first {
             return lxhEmoticon
         }
-        
-        
-        
-        
         
         
         
@@ -170,12 +166,7 @@ class SUPEmoticonTools: NSObject {
         //            return lxhEmoticon
         //        }
         
-        
-        
-        
-        
-        
-        
+     
         
         
         //        //  在默认表情数组里面查找

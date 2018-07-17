@@ -25,7 +25,10 @@ class SUPStatusOriginView: UIView {
             //  绑定昵称
             screenNameLabel.text = statusViewModel?.status?.user?.screen_name
             //  设置微博数据
-            contentLabel.text = statusViewModel?.status?.text
+            //  绑定原创微博富文本
+            contentLabel.attributedText = statusViewModel?.origianlAttributedString
+            
+//            contentLabel.text = statusViewModel?.status?.text
             //  来源
             sourceLabel.text = statusViewModel?.sourceContent
             //  设置会员等级图片
