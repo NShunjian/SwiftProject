@@ -160,9 +160,7 @@ extension SUPHomeViewController {
         header?.setTitle("加载中...", for: .refreshing)
         
         // 3.设置tableView的header
-        //        if (header != nil) {
-        //
-        //        }
+        
         tableView.mj_header = header
         
         

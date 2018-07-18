@@ -10,4 +10,5 @@ target 'SwiftProject' do
     pod 'AFNetworking'
     pod 'SDWebImage'
     pod 'MJRefresh'
+    pod 'FMDB'
 end

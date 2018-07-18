@@ -19,6 +19,9 @@
 		C618EDB020FDB788006D1AC0 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C618EDAE20FDB788006D1AC0 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C618EDB220FDBA2D006D1AC0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C618EDB120FDBA2D006D1AC0 /* libicucore.tbd */; };
 		C618EDB420FDBC12006D1AC0 /* SUPMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDB320FDBC12006D1AC0 /* SUPMatchResult.swift */; };
+		C618EDF320FF6A4A006D1AC0 /* db.sql in Resources */ = {isa = PBXBuildFile; fileRef = C618EDF220FF6A4A006D1AC0 /* db.sql */; };
+		C618EDF520FF6B83006D1AC0 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDF420FF6B82006D1AC0 /* SqliteManager.swift */; };
+		C618EDF720FF6CC2006D1AC0 /* SUPStatusDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDF620FF6CC1006D1AC0 /* SUPStatusDAL.swift */; };
 		C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6C20EF120500DAFF7E /* SUPStatus.swift */; };
 		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
 		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
@@ -83,6 +86,9 @@
 		C618EDAF20FDB788006D1AC0 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		C618EDB120FDBA2D006D1AC0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		C618EDB320FDBC12006D1AC0 /* SUPMatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPMatchResult.swift; sourceTree = "<group>"; };
+		C618EDF220FF6A4A006D1AC0 /* db.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = db.sql; sourceTree = "<group>"; };
+		C618EDF420FF6B82006D1AC0 /* SqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
+		C618EDF620FF6CC1006D1AC0 /* SUPStatusDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusDAL.swift; sourceTree = "<group>"; };
 		C6236A6C20EF120500DAFF7E /* SUPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatus.swift; sourceTree = "<group>"; };
 		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
 		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 				C62D85B820E5C8270061E1CE /* Assets.xcassets */,
 				C62D85BA20E5C8270061E1CE /* LaunchScreen.storyboard */,
 				C62D85BD20E5C8270061E1CE /* Info.plist */,
+				C618EDF220FF6A4A006D1AC0 /* db.sql */,
 			);
 			path = SwiftProject;
 			sourceTree = "<group>";
@@ -257,6 +264,7 @@
 				C6A3AB4420EDF59A00557BEA /* SUPUserAccountViewModel.swift */,
 				C6236A7E20EF75A900DAFF7E /* SUPStatusListViewModel.swift */,
 				C6236A8020EF75C400DAFF7E /* SUPStatusViewModel.swift */,
+				C618EDF620FF6CC1006D1AC0 /* SUPStatusDAL.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				C60B345120FB2E5400914236 /* NSStringEmoji */,
 				C6236A7420EF714700DAFF7E /* Extension */,
 				C6A3AB2D20EB975C00557BEA /* SUPNetworkTools.swift */,
+				C618EDF420FF6B82006D1AC0 /* SqliteManager.swift */,
 				C6A3AB4920EE06AA00557BEA /* CommonTools.swift */,
 				C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */,
 				C6236A7220EF6C7D00DAFF7E /* knowledge.swift */,
@@ -469,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C618EDF320FF6A4A006D1AC0 /* db.sql in Resources */,
 				C62D85BC20E5C8270061E1CE /* LaunchScreen.storyboard in Resources */,
 				C60B345020FB2C4E00914236 /* Emoticons.bundle in Resources */,
 				C62D85B920E5C8270061E1CE /* Assets.xcassets in Resources */,
@@ -502,6 +512,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -510,6 +521,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -567,8 +579,10 @@
 				C618EDB420FDBC12006D1AC0 /* SUPMatchResult.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
 				C60B345D20FB36CB00914236 /* SUPTextAttachment.swift in Sources */,
+				C618EDF720FF6CC2006D1AC0 /* SUPStatusDAL.swift in Sources */,
 				C66A7AFA20E9FE6800576362 /* SUPMainViewController.swift in Sources */,
 				C6A3AB4520EDF59A00557BEA /* SUPUserAccountViewModel.swift in Sources */,
+				C618EDF520FF6B83006D1AC0 /* SqliteManager.swift in Sources */,
 				C66B97B820F898DB00BD37B5 /* SUPEmoticonToolBar.swift in Sources */,
 				C6A3AB2C20EB7BC100557BEA /* SUPOAuthViewController.swift in Sources */,
 				C62D85B220E5C8270061E1CE /* AppDelegate.swift in Sources */,
