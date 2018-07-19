@@ -65,7 +65,8 @@ class SUPStatusPictureView: UICollectionView {
         register(SUPStatusPictureViewCell.self, forCellWithReuseIdentifier: StatusPictureViewCellIdentifier)
         //  设置数据代理
         dataSource = self
-        
+         //  设置代理
+        delegate = self
         addSubview(messageLabel)
         
         messageLabel.snp.makeConstraints { (make) -> Void in
@@ -100,8 +101,8 @@ class SUPStatusPictureView: UICollectionView {
 }
 
 //  MARK:   - 实现UICollectionViewDataSource的协议
-extension SUPStatusPictureView: UICollectionViewDataSource {
-    
+extension SUPStatusPictureView: UICollectionViewDataSource,UICollectionViewDelegate, SDPhotoBrowserDelegate {
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return picUrls?.count ?? 0
     }
@@ -114,6 +115,60 @@ extension SUPStatusPictureView: UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //        SDPhotoBrowser *photoBrowser = [SDPhotoBrowser new];
+        //        photoBrowser.delegate = self;
+        //        photoBrowser.currentImageIndex = indexPath.item;
+        //        photoBrowser.imageCount = self.modelsArray.count;
+        //        photoBrowser.sourceImagesContainerView = self.collectionView;
+        //
+        //        [photoBrowser show];
+        
+        let photoBrowser = SDPhotoBrowser()
+         photoBrowser.sourceImagesContainerView = self
+         photoBrowser.imageCount = picUrls!.count
+         photoBrowser.currentImageIndex = indexPath.item
+         photoBrowser.delegate = self
+        
+       
+       
+        photoBrowser.show()
+        
+        
+    }
+    
+    func photoBrowser(_ browser: SDPhotoBrowser!, placeholderImageFor index: Int) -> UIImage! {
+        // 不建议用此种方式获取小图，这里只是为了简单实现展示而已
+        //        SDCollectionViewDemoCell *cell = (SDCollectionViewDemoCell *)[self collectionView:self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+        //
+        //        return cell.imageView.image;
+        
+
+        let indexPath = NSIndexPath.init(item: index, section: 0)
+        let cell = self.cellForItem(at: indexPath as IndexPath) as! SUPStatusPictureViewCell
+        
+        return cell.imageView.image
+        
+        
+        
+    }
+    
+    // 返回高质量图片的url
+    func photoBrowser(_ browser: SDPhotoBrowser!, highQualityImageURLFor index: Int) -> URL! {
+        //        NSString *urlStr = [[self.modelsArray[index] thumbnail_pic] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        //        return [NSURL URLWithString:urlStr];
+        
+        
+         let urlStr = picUrls![index].thumbnail_pic!.replacingOccurrences(of: "thumbnail", with: "bmiddle")
+        
+        
+        return NSURL(string: urlStr)! as URL
+        
+    }
+    
+    
+    
 }
 //  自定义配图cell
 class SUPStatusPictureViewCell: UICollectionViewCell {
@@ -140,7 +195,7 @@ class SUPStatusPictureViewCell: UICollectionViewCell {
     }
     
     //  MARK:   --懒加载控件
-    private lazy var imageView: UIImageView = {
+     lazy var imageView: UIImageView = {
         let view = UIImageView(image: UIImage(named: "timeline_image_placeholder"))
         //  修改显示模型为等比填充,保证图片比例不变
         view.contentMode = UIViewContentMode.scaleAspectFill

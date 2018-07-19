@@ -26,8 +26,8 @@ class SqliteManager: NSObject {
     //  构造函数私有化
     private override init() {
         super.init()
-        print(DBPath)
-        print(queue)
+//        print(DBPath)
+//        print(queue)
         createTables()
         
     }

@@ -22,6 +22,9 @@
 		C618EDF320FF6A4A006D1AC0 /* db.sql in Resources */ = {isa = PBXBuildFile; fileRef = C618EDF220FF6A4A006D1AC0 /* db.sql */; };
 		C618EDF520FF6B83006D1AC0 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDF420FF6B82006D1AC0 /* SqliteManager.swift */; };
 		C618EDF720FF6CC2006D1AC0 /* SUPStatusDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C618EDF620FF6CC1006D1AC0 /* SUPStatusDAL.swift */; };
+		C618EE0121008EB4006D1AC0 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C618EDFB21008EB4006D1AC0 /* SDPhotoBrowser.m */; };
+		C618EE0221008EB4006D1AC0 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C618EDFC21008EB4006D1AC0 /* SDWaitingView.m */; };
+		C618EE0321008EB4006D1AC0 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C618EDFD21008EB4006D1AC0 /* SDBrowserImageView.m */; };
 		C6236A6D20EF120500DAFF7E /* SUPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6C20EF120500DAFF7E /* SUPStatus.swift */; };
 		C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A6E20EF124300DAFF7E /* SUPUser.swift */; };
 		C6236A7120EF1FA600DAFF7E /* Foundation+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */; };
@@ -89,6 +92,13 @@
 		C618EDF220FF6A4A006D1AC0 /* db.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = db.sql; sourceTree = "<group>"; };
 		C618EDF420FF6B82006D1AC0 /* SqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		C618EDF620FF6CC1006D1AC0 /* SUPStatusDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatusDAL.swift; sourceTree = "<group>"; };
+		C618EDFA21008EB4006D1AC0 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		C618EDFB21008EB4006D1AC0 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		C618EDFC21008EB4006D1AC0 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		C618EDFD21008EB4006D1AC0 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		C618EDFE21008EB4006D1AC0 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		C618EDFF21008EB4006D1AC0 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		C618EE0021008EB4006D1AC0 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		C6236A6C20EF120500DAFF7E /* SUPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPStatus.swift; sourceTree = "<group>"; };
 		C6236A6E20EF124300DAFF7E /* SUPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPUser.swift; sourceTree = "<group>"; };
 		C6236A7020EF1FA600DAFF7E /* Foundation+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Log.swift"; sourceTree = "<group>"; };
@@ -187,6 +197,28 @@
 			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
+		C618EDF821008E80006D1AC0 /* ThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				C618EDF921008EB4006D1AC0 /* SDPhotoBrowser */,
+			);
+			path = ThirdLibs;
+			sourceTree = "<group>";
+		};
+		C618EDF921008EB4006D1AC0 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				C618EDFA21008EB4006D1AC0 /* SDPhotoBrowserConfig.h */,
+				C618EDFB21008EB4006D1AC0 /* SDPhotoBrowser.m */,
+				C618EDFC21008EB4006D1AC0 /* SDWaitingView.m */,
+				C618EDFD21008EB4006D1AC0 /* SDBrowserImageView.m */,
+				C618EDFE21008EB4006D1AC0 /* SDWaitingView.h */,
+				C618EDFF21008EB4006D1AC0 /* SDPhotoBrowser.h */,
+				C618EE0021008EB4006D1AC0 /* SDBrowserImageView.h */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		C6236A7420EF714700DAFF7E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +282,7 @@
 		C66A7AEF20E9FCDA00576362 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C618EDF821008E80006D1AC0 /* ThirdLibs */,
 				C66A7AF120E9FCDA00576362 /* Tools */,
 				C66A7AF020E9FCDA00576362 /* ViewModels */,
 				C66A7AF220E9FCDA00576362 /* Models */,
@@ -575,6 +608,7 @@
 				C66B97BA20F8994000BD37B5 /* SUPEmoticonCollectionViewCell.swift in Sources */,
 				C6236A7F20EF75A900DAFF7E /* SUPStatusListViewModel.swift in Sources */,
 				C6236A8720EF7B5400DAFF7E /* SUPStatusRetweetView.swift in Sources */,
+				C618EE0121008EB4006D1AC0 /* SDPhotoBrowser.m in Sources */,
 				C6236A7320EF6C7D00DAFF7E /* knowledge.swift in Sources */,
 				C618EDB420FDBC12006D1AC0 /* SUPMatchResult.swift in Sources */,
 				C6A3AB4D20EE0DDE00557BEA /* SUPWelComeViewController.swift in Sources */,
@@ -595,6 +629,7 @@
 				C6236A7720EF714800DAFF7E /* UIView+Extension.swift in Sources */,
 				C60B345520FB2F1A00914236 /* NSString+Emoji.m in Sources */,
 				C6236A7820EF714800DAFF7E /* UIBarButtonItem+Extension.swift in Sources */,
+				C618EE0321008EB4006D1AC0 /* SDBrowserImageView.m in Sources */,
 				C618EDB020FDB788006D1AC0 /* RegexKitLite.m in Sources */,
 				C6236A6F20EF124300DAFF7E /* SUPUser.swift in Sources */,
 				C66A7AFC20E9FEF400576362 /* SUPHomeViewController.swift in Sources */,
@@ -603,6 +638,7 @@
 				C6236A8320EF79AC00DAFF7E /* SUPStatusOriginView.swift in Sources */,
 				C6236A8520EF7B2B00DAFF7E /* SUPStatusToolBar.swift in Sources */,
 				C60B345F20FB3CBD00914236 /* SUPComposeTextView+Extension.swift in Sources */,
+				C618EE0221008EB4006D1AC0 /* SDWaitingView.m in Sources */,
 				C66A7B0420EA0D9200576362 /* SUPTabBar.swift in Sources */,
 				C6A3AB2520EB0EEF00557BEA /* SUPVisitorView.swift in Sources */,
 				C60B345B20FB369D00914236 /* SUPEmoticonButton.swift in Sources */,

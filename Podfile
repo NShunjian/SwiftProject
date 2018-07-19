@@ -11,4 +11,5 @@ target 'SwiftProject' do
     pod 'SDWebImage'
     pod 'MJRefresh'
     pod 'FMDB'
+    #pod 'SDPhotoBrowser'
 end
