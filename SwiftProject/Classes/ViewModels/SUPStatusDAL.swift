@@ -51,13 +51,6 @@ class SUPStatusDAL: NSObject {
         }
         
         
-        
-        
-        
-        
-        
-        
-        
     }
     //  查询本地缓存数据
     class func checkCacheData(maxId: Int64, sinceId: Int64) -> [[String: AnyObject]] {
@@ -65,7 +58,7 @@ class SUPStatusDAL: NSObject {
         //  准备sql
         var sql = "SELECT * FROM statuses\n"
         
-        if maxId > 0 {
+        if maxId > 0 {    
             //  上拉加载
             sql += "where statusid < \(maxId)\n"
         } else {
@@ -81,6 +74,7 @@ class SUPStatusDAL: NSObject {
         
         
         let result = SqliteManager.sharedManager.queryDicArrayForSql(sql: sql)
+
         var tempArray = [[String: AnyObject]]()
         for value in result {
             //  获取微博二进制数据
@@ -91,9 +85,6 @@ class SUPStatusDAL: NSObject {
         }
         
         return tempArray
-        
-        
-        
         
         
     }
@@ -135,15 +126,20 @@ class SUPStatusDAL: NSObject {
     
     //  清除缓存数据
     class func clearCacheData() {
+//        let date = NSDate().addingTimeInterval(-10 * 60)  //表示当前时间的10分钟之前的时间,比如: 当前时间 10:28 10分钟之前的是 10:18 ,   后面的数据库就是要删除掉 10:18以前的数据, 保留当前时间 10分钟 之内的数据, 就是10:28 到 10:18 之内 10分钟 的数据
+//        SUPLog(NSDate())
+//        SUPLog(NSDate().addingTimeInterval(10 * 60))
+//        SUPLog(date)
         
         
-        let date = NSDate().addingTimeInterval(MaxTimeInterval)
+        let date = NSDate().addingTimeInterval(MaxTimeInterval) //表示当前时间的7天之前的时间
         let dt = DateFormatter()
         dt.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dt.locale = NSLocale(localeIdentifier: "en_US") as Locale?
-        //  获取时间字符串
-        let dtStr = dt.string(from: date as Date as Date)
         
+        //  获取时间字符串
+        let dtStr = dt.string(from: date as Date)
+        SUPLog(dtStr)
         //  准备sql语句
         let sql = "Delete FROM statuses where time < '\(dtStr)'"
         //  执行sql语句

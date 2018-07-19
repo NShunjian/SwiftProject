@@ -40,6 +40,7 @@ class SqliteManager: NSObject {
         
         queue.inDatabase { (db) in
             let resultSet = db.executeQuery(sql, withArgumentsIn: [])
+            
             //  遍历结果集,判断是否有下一条记录
             while (resultSet?.next())! {
 

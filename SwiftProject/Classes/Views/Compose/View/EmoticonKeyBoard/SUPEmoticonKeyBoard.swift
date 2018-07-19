@@ -45,6 +45,18 @@ class SUPEmoticonKeyBoard: UIView {
         
     }()
     
+    //  页数指示器
+    private lazy var pageControl: UIPageControl = {
+        
+        let pageCtr = UIPageControl()
+        pageCtr.currentPageIndicatorTintColor = UIColor(patternImage: UIImage(named: "compose_keyboard_dot_selected")!)
+        pageCtr.pageIndicatorTintColor = UIColor(patternImage: UIImage(named: "compose_keyboard_dot_normal")!)
+        
+        return pageCtr
+        
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -57,7 +69,14 @@ class SUPEmoticonKeyBoard: UIView {
     private func setupUI() {
         
         backgroundColor = UIColor(patternImage: UIImage(named: "emoticon_keyboard_background")!)
+        //  默认页数数据绑定
+        let defaultIndexPath: NSIndexPath = NSIndexPath.init(item: 0, section: 0)
+        //  设置数据
+        setPageControlDataForIndexPath(indexPath: defaultIndexPath)
+        
         addSubview(emoticonCollectionView)
+        //  添加页数指示控件
+        addSubview(pageControl)
         //  添加控件
         addSubview(toolBar)
         
@@ -68,6 +87,12 @@ class SUPEmoticonKeyBoard: UIView {
             make.leading.equalTo(self)
             make.trailing.equalTo(self)
             make.bottom.equalTo(toolBar.snp.top)
+        }
+        
+        pageControl.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalTo(emoticonCollectionView)
+            make.centerX.equalTo(emoticonCollectionView)
+            make.height.equalTo(10)
         }
         
         toolBar.snp.makeConstraints { (make) -> Void in
@@ -96,10 +121,16 @@ class SUPEmoticonKeyBoard: UIView {
             //  滚动到指定位置,不需要开启动画
             self?.emoticonCollectionView.scrollToItem(at: indexPath as IndexPath, at: UICollectionViewScrollPosition.left, animated: false)
             
+            self?.setPageControlDataForIndexPath(indexPath: indexPath)
         }
         
     }
-    
+    //  通过indexPath绑定页数控件的数据
+    private func setPageControlDataForIndexPath(indexPath: NSIndexPath) {
+        pageControl.numberOfPages = SUPEmoticonTools.sharedTools.allEmoticonArray[indexPath.section].count
+        pageControl.currentPage = indexPath.item
+        
+    }
     //  设置子控件布局方式
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -184,6 +215,8 @@ extension SUPEmoticonKeyBoard: UICollectionViewDataSource, UICollectionViewDeleg
             let section = indexPath.section
             //  选中指定这组数据
             toolBar.selectedButtonWithSection(section: section)
+            
+            setPageControlDataForIndexPath(indexPath: indexPath as NSIndexPath)
         }
     }
 }

@@ -81,9 +81,10 @@ class SUPHomeViewController: SUPVisitorViewControlle {
     //  加载微博数据
     private func loadData(isPullup : Bool) {
         
-        statusListViewModel.loadData(isPullup: isPullup) { (isSuccess) -> () in
+        statusListViewModel.loadData(isPullup: isPullup) { (isSuccess, message) -> () in
             //这个配合系统使用的
             //   self.endRefreshing()
+            
             let time: TimeInterval = 1.0
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
                 //code
@@ -92,7 +93,11 @@ class SUPHomeViewController: SUPVisitorViewControlle {
                 self.tableView.mj_footer.endRefreshing()
                 // self.tableView.mj_footer.endRefreshingWithNoMoreData()
                 // 显示提示的Label
-                self.showTipLabel(count: self.statusListViewModel.statusList.count)
+                if isPullup == false {
+                     //  开启tip动画
+                    self.showTipLabel(message: message)
+                }
+//                self.showTipLabel(message: message)
             }
             if isSuccess {
                 //  数据请求成功重写刷新数据
@@ -105,10 +110,15 @@ class SUPHomeViewController: SUPVisitorViewControlle {
     }
     
     /// 显示提示的Label
-    private func showTipLabel(count : Int) {
+    private func showTipLabel(message : String) {
+        //  判断视图如果显示表示正在执行动画,让其直接返回不执行下面的代码
+        if tipLabel.isHidden == false {
+            return
+        }
+        
         // 1.设置tipLabel的属性
         tipLabel.isHidden = false
-        tipLabel.text = count == 0 ? "没有新数据" : "\(count) 条形微博"
+        tipLabel.text = message
         
 //        // 6.动画
         let duration = 0.75;

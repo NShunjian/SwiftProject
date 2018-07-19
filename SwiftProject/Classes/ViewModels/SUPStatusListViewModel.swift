@@ -13,7 +13,7 @@ class SUPStatusListViewModel: NSObject {
     lazy var statusList: [SUPStatusViewModel] = [SUPStatusViewModel]()
     
     //  加载微博数据
-    func loadData(isPullup: Bool, callBack: @escaping (_ isSuccess: Bool)->()) {
+    func loadData(isPullup: Bool, callBack: @escaping (_ isSuccess: Bool, _ message: String)->()) {
         
         //  上拉加载所需要的参数
         var maxId: Int64 = 0
@@ -23,9 +23,11 @@ class SUPStatusListViewModel: NSObject {
         if isPullup {
             //  上拉加载获取数据源里面最后一条微博数据的id
             maxId = statusList.last?.status?.id ?? 0
-            if maxId > 0 {
+            SUPLog(maxId)
+            if maxId > 0 {   
                 //  避免重复数据
                 maxId -= 1
+               SUPLog(maxId)
             }
         } else {
             //  下拉刷新获取数据源里面的第一天微博的id
@@ -33,26 +35,41 @@ class SUPStatusListViewModel: NSObject {
             SUPLog(sinceId)
         }
         
+        //  默认显示的tip文字
+        var result = "没有加载到最新的微博数据"
         
-        SUPNetworkTools.sharedTools.requestStatuses(accessToken: SUPUserAccountViewModel.sharedUserAccount.accessToken!, maxId: maxId, sinceId: sinceId) { (response, error) -> () in
-            if error != nil {
-                SUPLog("网络请求异常,\(String(describing: error))")
-                callBack(false)
-                return
-            }
-            //  代码执行到此,表示网络请求成功
-            guard let dic = response as? [String: AnyObject] else {
-                SUPLog("字典格式不正确")
-                callBack(false)
-                return
-            }
-            //  字典格式正确
-            guard let dicArray = dic["statuses"] as? [[String: AnyObject]] else {
-                SUPLog("字典格式不正确")
-                callBack(false)
-                return
-            }
+        SUPStatusDAL.loadData(maxId: maxId, sinceId: sinceId) { (dicArray) in
+            
+            
+              //  以下代码抽取到了 StatusDAL
+            
+//        }
+//
+//        SUPStatusDAL.checkCacheData(maxId: maxId, sinceId: sinceId)
+//        SUPNetworkTools.sharedTools.requestStatuses(accessToken: SUPUserAccountViewModel.sharedUserAccount.accessToken!, maxId: maxId, sinceId: sinceId) { (response, error) -> () in
+//            if error != nil {
+//                SUPLog("网络请求异常,\(String(describing: error))")
+//                callBack(false, result)
+//                return
+//            }
+//            //  代码执行到此,表示网络请求成功
+//            guard let dic = response as? [String: AnyObject] else {
+//                SUPLog("字典格式不正确")
+//                callBack(false, result)
+//                return
+//            }
+//            //  字典格式正确
+//            guard let dicArray = dic["statuses"] as? [[String: AnyObject]] else {
+//                SUPLog("字典格式不正确")
+//                callBack(false, result)
+//                return
+//            }
+//
+////              缓存微博数据
+//            SUPStatusDAL.cacheData(statusDicArray: dicArray)
+        
             var tempArray = [SUPStatusViewModel]()
+            SUPLog(tempArray)
             for value in dicArray {
                 
                 //  字典转模型
@@ -76,7 +93,12 @@ class SUPStatusListViewModel: NSObject {
             //  刷新数据
             //            self.tableView.reloadData()
             
-            callBack(true)
+            
+            
+            if tempArray.count > 0 {
+                result = "加载了\(tempArray.count)条数据"
+            }
+            callBack(true, result)
             
         }
         
