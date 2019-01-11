@@ -25,7 +25,7 @@ class SUPVisitorView: UIView {
     private lazy var msgLab: UILabel = {
         let lable = UILabel()
 
-        lable.text = "***请在SUPOAuthViewController.swift中输入自己的***\r\n\r\n 微博AppKey: WeiboAppKey = 3165859311\r\n\r\n 微博AppSecret: WeiboAppSecret = c495c40b528ffc1e29045073b4b1da71\r\n\r\n 授权回调页: WeiboRedirect_Uri = http://www.baidu.cn"
+        lable.text = "***请在SUPOAuthViewController.swift中输入自己的***\r\n\r\n 微博AppKey: WeiboAppKey = 3165859311\r\n\r\n 微博AppSecret: WeiboAppSecret = c495c40b528ffc1e29045073b4b1da71\r\n\r\n 授权回调页: WeiboRedirect_Uri = http://www.baidu.cn\r\n\r\n !!!!!可以点击自动填充!!!!!"
         lable.textColor = UIColor.darkGray
         lable.font = UIFont.systemFont(ofSize: 18)
         lable.textAlignment = .center
