@@ -126,13 +126,10 @@ extension SUPStatusPictureView: UICollectionViewDataSource,UICollectionViewDeleg
         //        [photoBrowser show];
         
         let photoBrowser = SDPhotoBrowser()
-         photoBrowser.sourceImagesContainerView = self
-         photoBrowser.imageCount = picUrls!.count
-         photoBrowser.currentImageIndex = indexPath.item
-         photoBrowser.delegate = self
-        
-       
-       
+        photoBrowser.delegate = self
+        photoBrowser.currentImageIndex = indexPath.item
+        photoBrowser.imageCount = picUrls!.count
+        photoBrowser.sourceImagesContainerView = self
         photoBrowser.show()
         
         
@@ -154,7 +151,6 @@ extension SUPStatusPictureView: UICollectionViewDataSource,UICollectionViewDeleg
         
     }
     
-    // 返回高质量图片的url
     func photoBrowser(_ browser: SDPhotoBrowser!, highQualityImageURLFor index: Int) -> URL! {
         //        NSString *urlStr = [[self.modelsArray[index] thumbnail_pic] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
         //        return [NSURL URLWithString:urlStr];
