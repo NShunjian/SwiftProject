@@ -10,6 +10,7 @@
 <h1>SwiftProject</h1>
 Swift综合性项目
 <div>
+<img src="./imgs/QQ20190118-212701-HD.gif" width="24%">|
 <img src="./imgs/WechatIMG81.png" width="24%">|
 <img src="./imgs/WechatIMG82.png" width="24%">|
 <img src="./imgs/WechatIMG83.png" width="24%">|
